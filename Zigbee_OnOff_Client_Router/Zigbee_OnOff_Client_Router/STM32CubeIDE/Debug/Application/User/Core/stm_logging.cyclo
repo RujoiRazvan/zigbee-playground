@@ -1,0 +1,4 @@
+H:/STM32WB5MM-DK Project/Zigbee_OnOff_Client_Router/Zigbee_OnOff_Client_Router/Core/Src/stm_logging.c:69:24:logRegion	3
+H:/STM32WB5MM-DK Project/Zigbee_OnOff_Client_Router/Zigbee_OnOff_Client_Router/Core/Src/stm_logging.c:100:27:levelToString	5
+H:/STM32WB5MM-DK Project/Zigbee_OnOff_Client_Router/Zigbee_OnOff_Client_Router/Core/Src/stm_logging.c:130:24:logLevel	1
+H:/STM32WB5MM-DK Project/Zigbee_OnOff_Client_Router/Zigbee_OnOff_Client_Router/Core/Src/stm_logging.c:163:6:logApplication	2
