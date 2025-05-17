@@ -1,8 +1,0 @@
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:69:6:HW_UART_Receive_IT	2
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:94:6:HW_UART_Transmit_IT	2
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:117:13:HW_UART_Transmit	6
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:165:13:HW_UART_Transmit_DMA	6
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:217:6:HW_UART_Interrupt_Handler	2
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:240:6:HW_UART_DMA_Interrupt_Handler	2
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:263:6:HAL_UART_RxCpltCallback	3
-H:/STM32WB5MM-DK Project/Zigbee_OnOff_Server_Coord/Zigbee_OnOff_Server_Coord/Core/Src/hw_uart.c:292:6:HAL_UART_TxCpltCallback	3
