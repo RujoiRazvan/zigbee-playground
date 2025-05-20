@@ -1,3 +1,8 @@
+/*
+    Zigbee end device light example
+    This example demonstrates how to create a Zigbee light device using the ESP Zigbee stack.
+*/
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_check.h"
