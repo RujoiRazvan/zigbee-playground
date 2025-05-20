@@ -129,9 +129,8 @@ static void esp_zb_task(void *pvParameters)
     gpio_set_level(GPIO_OUTPUT_PIN_2, 1);
     esp_zb_cfg_t zb_nwk_cfg = ESP_ZB_ZED_CONFIG();
     esp_zb_init(&zb_nwk_cfg);
-    esp_zb_secur_network_key_set((uint8_t *)"ZigBeeAlliance09");
-    uint16_t pan_id = 0x1AAA;
-    esp_zb_set_pan_id(pan_id);
+    esp_zb_secur_network_key_set((uint8_t *)ZigBee_KEY);
+    esp_zb_set_pan_id(ZigBee_PAN_ID);
     esp_zb_on_off_light_cfg_t light_cfg = ESP_ZB_DEFAULT_ON_OFF_LIGHT_CONFIG();
     esp_zb_ep_list_t *esp_zb_on_off_light_ep = esp_zb_on_off_light_ep_create(HA_ESP_LIGHT_ENDPOINT, &light_cfg);
     esp_zb_device_register(esp_zb_on_off_light_ep);
