@@ -14,8 +14,6 @@
 #error Define ZB_ED_ROLE in idf.py menuconfig to compile light (End Device) source code.
 #endif
 
-static const char *TAG = "ESP_ZB_ON_OFF_LIGHT";
-/********************* Define functions **************************/
 static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
 {
     ESP_ERROR_CHECK(esp_zb_bdb_start_top_level_commissioning(mode_mask));
@@ -30,10 +28,10 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
     case ESP_ZB_ZDO_SIGNAL_SKIP_STARTUP:
         //ESP_LOGI(TAG, "Zigbee stack initialized");
         esp_zb_bdb_start_top_level_commissioning(ESP_ZB_BDB_MODE_INITIALIZATION);
-        esp_zb_set_tx_power(20);
+        esp_zb_set_tx_power(ZIGBEE_MAX_POWER_LEVEL);
         int8_t returnedPower = 255;
-        //esp_zb_get_tx_power(&returnedPower);
-		//ESP_LOGI(TAG, "TX Power is: %d", returnedPower);
+        esp_zb_get_tx_power(&returnedPower);
+		ESP_LOGI(TAG, "TX Power is: %d", returnedPower);
         break;
     case ESP_ZB_BDB_SIGNAL_DEVICE_FIRST_START:
     case ESP_ZB_BDB_SIGNAL_DEVICE_REBOOT:
