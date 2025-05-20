@@ -1,2 +1,6 @@
 HA_on_off_coordinator/build
 HA_on_off_coordinator/.vscode
+ESP32/HA_on_off_light/build
+ESP32/HA_on_off_light/.vscode
+ESP32/HA_on_off_switch/build
+ESP32/HA_on_off_switch/.vscode
