@@ -4,3 +4,7 @@ ESP32/HA_on_off_light/build
 ESP32/HA_on_off_light/.vscode
 ESP32/HA_on_off_switch/build
 ESP32/HA_on_off_switch/.vscode
+ESP32/HA_on_off_router/build
+ESP32/HA_on_off_router/.vscode
+STM32/ZigBee_OnOff/Zigbee_OnOff_Client_Router/STM32CubeIDE/Debug
+STM32/ZigBee_OnOff/Zigbee_OnOff_Server_Coord/STM32CubeIDE/Debug
