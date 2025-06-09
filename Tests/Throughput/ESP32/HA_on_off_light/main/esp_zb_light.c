@@ -1,6 +1,6 @@
 /*
-    Zigbee end device light example
-    This example demonstrates how to create a Zigbee light device using the ESP Zigbee stack.
+    Zigbee End Device light example
+    This example is used for throughput testing of the Zigbee End Device (ZED) light.
 */
 
 #include "freertos/FreeRTOS.h"
@@ -12,20 +12,19 @@
 #include "esp_zb_light.h"
 #include "driver/gpio.h"
 
-#define GPIO_OUTPUT_PIN_2 2
-#define GPIO_OUTPUT_PIN_1 1
-
 #if !defined ZB_ED_ROLE
 #error Define ZB_ED_ROLE in idf.py menuconfig to compile light (End Device) source code.
 #endif
+
+#define DEBUG 0
+
 uint16_t short_address = 0;
-    bool light_state = 0;
+bool light_state = 0;
+
 static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
 {
     ESP_ERROR_CHECK(esp_zb_bdb_start_top_level_commissioning(mode_mask));
 }
-
-
 
 void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
 {
@@ -62,7 +61,6 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
         if (err_status == ESP_OK) {
             esp_zb_ieee_addr_t extended_pan_id;
             esp_zb_get_extended_pan_id(extended_pan_id);
-            gpio_set_level(GPIO_OUTPUT_PIN_2, 0);
             ESP_LOGI(TAG, "Joined network successfully (Extended PAN ID: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x, PAN ID: 0x%04hx, Channel:%d, Short Address: 0x%04hx)",
                      extended_pan_id[7], extended_pan_id[6], extended_pan_id[5], extended_pan_id[4],
                      extended_pan_id[3], extended_pan_id[2], extended_pan_id[1], extended_pan_id[0],
@@ -83,15 +81,13 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
 static void read_button_state()
 {
     int level = gpio_get_level(9);
-    //ESP_LOGI(TAG, "GPIO 9 level: %d", level);
-
     if (!level)
     {
         ESP_LOGI(TAG, "Device will go in factory mode");
         esp_zb_factory_reset();
     }
 
-    esp_zb_scheduler_alarm(read_button_state, NULL, 10000); // Rulează la fiecare 10 secunde
+    esp_zb_scheduler_alarm(read_button_state, NULL, 10000);
 }
 
 static esp_err_t zb_attribute_handler(const esp_zb_zcl_set_attr_value_message_t *message)
@@ -102,13 +98,17 @@ static esp_err_t zb_attribute_handler(const esp_zb_zcl_set_attr_value_message_t 
     ESP_RETURN_ON_FALSE(message, ESP_FAIL, TAG, "Empty message");
     ESP_RETURN_ON_FALSE(message->info.status == ESP_ZB_ZCL_STATUS_SUCCESS, ESP_ERR_INVALID_ARG, TAG, "Received message: error status(%d)",
                         message->info.status);
+#ifdef DEBUG
     ESP_LOGI(TAG, "Received message: endpoint(%d), cluster(0x%x), attribute(0x%x), data size(%d)", message->info.dst_endpoint, message->info.cluster,
              message->attribute.id, message->attribute.data.size);
+#endif
     if (message->info.dst_endpoint == HA_ESP_LIGHT_ENDPOINT) {
         if (message->info.cluster == ESP_ZB_ZCL_CLUSTER_ID_ON_OFF) {
             if (message->attribute.id == ESP_ZB_ZCL_ATTR_ON_OFF_ON_OFF_ID && message->attribute.data.type == ESP_ZB_ZCL_ATTR_TYPE_BOOL) {
                 light_state = message->attribute.data.value ? *(bool *)message->attribute.data.value : light_state;
+#ifdef DEBUG
                 ESP_LOGI(TAG, "Light sets to %s", light_state ? "On" : "Off");
+#endif
                 light_driver_set_power(light_state);
                 esp_zb_zcl_set_attribute_val(
     HA_ESP_LIGHT_ENDPOINT,
@@ -141,7 +141,6 @@ static esp_err_t zb_action_handler(esp_zb_core_action_callback_id_t callback_id,
 static void esp_zb_task(void *pvParameters)
 {
     /* initialize Zigbee stack */
-    gpio_set_level(GPIO_OUTPUT_PIN_2, 1);
     esp_zb_cfg_t zb_nwk_cfg = ESP_ZB_ZED_CONFIG();
     esp_zb_init(&zb_nwk_cfg);
     esp_zb_secur_network_key_set((uint8_t *)ZigBee_KEY);
@@ -163,10 +162,6 @@ void app_main(void)
         .host_config = ESP_ZB_DEFAULT_HOST_CONFIG(),
     };
 
-    gpio_config_t io_conf = {
-        .pin_bit_mask = (1ULL << GPIO_OUTPUT_PIN_2) | (1UL << GPIO_OUTPUT_PIN_1),
-        .mode = GPIO_MODE_OUTPUT,
-    };
      // Configure input pin
      gpio_config_t io_conf_in = {
         .pin_bit_mask = (1ULL << 9),
@@ -174,9 +169,7 @@ void app_main(void)
         .pull_down_en = GPIO_PULLDOWN_DISABLE, 
         .intr_type = GPIO_INTR_DISABLE
     };
-    gpio_config(&io_conf);
     gpio_config(&io_conf_in);
-    gpio_set_level(GPIO_OUTPUT_PIN_2, 0);
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_zb_platform_config(&config));
     light_driver_init(LIGHT_DEFAULT_OFF);
