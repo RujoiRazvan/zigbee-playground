@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "esp_zb_switch.h": "c",
+        "esp_zigbee_core.h": "c",
+        "zb_zcl_common.h": "c",
+        "esp_zigbee_zgp.h": "c"
+    }
+}

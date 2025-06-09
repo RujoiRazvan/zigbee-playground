@@ -1,0 +1,438 @@
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=4209002ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x15 (USB_UART_HPSYS),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4080473e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x17ac
+load:0x4083cad0,len:0xef4
+load:0x4083efd0,len:0x2cd4
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time May 27 2025 23:50:23[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (26) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42090020 size=113ach ( 70572) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=000213d4 vaddr=40800000 size=06c44h ( 27716) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=8fe74h (589428) map[0m
+[0;32mI (304) esp_image: segment 3: paddr=000b7e9c vaddr=40806c44 size=06924h ( 26916) load[0m
+[0;32mI (313) esp_image: segment 4: paddr=000be7c8 vaddr=4080d570 size=01e3ch (  7740) load[0m
+[0;32mI (321) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (322) boot: Disabling RNG early entropy source...[0m
+[0;32mI (334) cpu_start: Unicore app[0m
+[0;32mI (343) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (344) app_init: Application information:[0m
+[0;32mI (346) app_init: Project name:     light_switch[0m
+[0;32mI (351) app_init: App version:      37a75c2[0m
+[0;32mI (356) app_init: Compile time:     May 27 2025 23:47:56[0m
+[0;32mI (362) app_init: ELF file SHA256:  67c71c520...[0m
+[0;32mI (367) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (373) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (378) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (382) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (387) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 40819100 len 00034280 (208 KiB): RAM[0m
+[0;32mI (401) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (408) spi_flash: detected chip: generic[0m
+[0;32mI (411) spi_flash: flash io: dio[0m
+[0;33mW (415) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (429) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (435) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (443) main_task: Started on CPU0[0m
+[0;32mI (443) main_task: Calling app_main()[0m
+[0;32mI (443) CPU_FREQ: CPU frequency: 96000000 Hz[0m
+[0;32mI (453) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (463) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (473) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (523) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (523) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (543) main_task: Returned from app_main()[0m
+[0;32mI (553) ZigBee Coordinator: Zigbee stack initialized[0m
+[0;32mI (553) ZigBee Coordinator: TX Power is: 20[0m
+[0;32mI (553) ZigBee Coordinator: Channel is: 13[0m
+[0;32mI (573) ZigBee Coordinator: Device rebooted[0m
+[0;32mI (5793) ZigBee Coordinator: New device commissioned or rejoined (short: 0xf466)[0m
+[0;32mI (5833) ZigBee Coordinator: Found light[0m
+[0;32mI (5833) ZigBee Coordinator: Try to bind On/Off[0m
+[0;32mI (5843) ZigBee Coordinator: Bound successfully![0m
+[0;32mI (5843) ZigBee Coordinator: The light originating from address(0xf466) on endpoint(1)[0m
+[0;33mW (14423) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 235[0m
+[0;33mW (46813) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 17[0m
+[0;33mW (163603) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 49[0m
+[0;33mW (165553) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 97[0m
+[0;32mI (305843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (305843) ZigBee Coordinator: Trimise: 10513, Recepționate: 10550, Pierdute: 4[0m
+[0;33mW (442103) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 104[0m
+[0;33mW (505043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 73[0m
+[0;33mW (505903) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 87[0m
+[0;33mW (506723) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 89[0m
+[0;33mW (507933) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 110[0m
+[0;33mW (508443) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 111[0m
+[0;33mW (508943) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 112[0m
+[0;33mW (509443) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 113[0m
+[0;33mW (509943) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 114[0m
+[0;33mW (510443) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 115[0m
+[0;33mW (510943) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 116[0m
+[0;33mW (510943) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (511443) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 117[0m
+[0;33mW (511443) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (511943) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 118[0m
+[0;33mW (511953) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (512453) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 119[0m
+[0;33mW (512453) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (512953) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 120[0m
+[0;33mW (512953) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (513453) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 121[0m
+[0;33mW (513453) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (513953) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 122[0m
+[0;33mW (513953) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (514453) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 123[0m
+[0;33mW (514453) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (514953) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 124[0m
+[0;33mW (514953) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (515453) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 125[0m
+[0;33mW (515463) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (515963) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 126[0m
+[0;33mW (515963) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (516463) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 127[0m
+[0;33mW (516463) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (516503) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (516963) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 128[0m
+[0;33mW (517463) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 129[0m
+[0;33mW (517463) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (517593) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (517963) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 130[0m
+[0;33mW (518103) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (518413) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (518463) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 131[0m
+[0;33mW (518963) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 132[0m
+[0;33mW (519463) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 133[0m
+[0;33mW (519473) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519563) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519563) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519563) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519573) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519603) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (519973) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 134[0m
+[0;33mW (520153) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (520473) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 135[0m
+[0;33mW (520653) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (520973) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 136[0m
+[0;33mW (521153) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (521473) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 137[0m
+[0;33mW (521643) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (521973) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 138[0m
+[0;33mW (522163) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (522473) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 139[0m
+[0;33mW (522633) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (522973) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 140[0m
+[0;33mW (523473) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 141[0m
+[0;33mW (523983) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 142[0m
+[0;33mW (524483) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 143[0m
+[0;33mW (524983) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 144[0m
+[0;33mW (525483) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 145[0m
+[0;33mW (525483) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (525983) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 146[0m
+[0;33mW (525983) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (526483) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 147[0m
+[0;33mW (526483) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (526983) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 148[0m
+[0;33mW (526993) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (527483) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 149[0m
+[0;33mW (527493) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (527993) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 150[0m
+[0;33mW (527993) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (528493) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 151[0m
+[0;33mW (528493) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (528993) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 152[0m
+[0;33mW (528993) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (529143) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (529493) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 153[0m
+[0;33mW (529993) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 154[0m
+[0;33mW (529993) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (530133) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (530493) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 155[0m
+[0;33mW (530673) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (530993) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 156[0m
+[0;33mW (531123) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (531503) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 157[0m
+[0;33mW (532003) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 158[0m
+[0;33mW (532003) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (532173) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (532503) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 159[0m
+[0;33mW (532643) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (533003) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 160[0m
+[0;33mW (533143) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (533503) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 161[0m
+[0;33mW (533623) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (534003) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 162[0m
+[0;33mW (534153) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (534503) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 163[0m
+[0;33mW (534663) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (535003) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 164[0m
+[0;33mW (535183) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (535513) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 165[0m
+[0;33mW (535693) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (536013) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 166[0m
+[0;33mW (536203) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (536513) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 167[0m
+[0;33mW (536683) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (537013) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 168[0m
+[0;33mW (537193) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (537513) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 169[0m
+[0;33mW (538013) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 170[0m
+[0;33mW (538013) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (538513) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 171[0m
+[0;33mW (538523) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (539013) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 172[0m
+[0;33mW (539023) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (539523) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 173[0m
+[0;33mW (539523) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (540023) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 174[0m
+[0;33mW (540023) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (540523) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 175[0m
+[0;33mW (540523) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (541023) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 176[0m
+[0;33mW (541023) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (541523) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 177[0m
+[0;33mW (541523) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (541683) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (542023) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 178[0m
+[0;33mW (542523) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 179[0m
+[0;33mW (542533) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (542663) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (543033) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 180[0m
+[0;33mW (543183) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (543533) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 181[0m
+[0;33mW (543673) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (544033) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 182[0m
+[0;33mW (544533) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 183[0m
+[0;33mW (544533) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (544733) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (545033) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 184[0m
+[0;33mW (545213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (545533) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 185[0m
+[0;33mW (545693) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (546033) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 186[0m
+[0;33mW (546163) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (546533) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 187[0m
+[0;33mW (546723) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (547043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 188[0m
+[0;33mW (547213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (547543) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 189[0m
+[0;33mW (547743) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (548043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 190[0m
+[0;33mW (548193) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (548543) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 191[0m
+[0;33mW (548733) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (549043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 192[0m
+[0;33mW (549213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (549543) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 193[0m
+[0;33mW (549703) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (550043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 194[0m
+[0;33mW (550543) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 195[0m
+[0;33mW (550553) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (551043) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 196[0m
+[0;33mW (551053) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (551553) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 197[0m
+[0;33mW (551553) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (552053) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 198[0m
+[0;33mW (552053) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (552553) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 199[0m
+[0;33mW (552553) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (553053) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 200[0m
+[0;33mW (553053) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (553553) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 201[0m
+[0;33mW (553553) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (554053) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 202[0m
+[0;33mW (554053) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (554193) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (554553) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 203[0m
+[0;33mW (555063) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 204[0m
+[0;33mW (555063) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (555253) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (555563) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 205[0m
+[0;33mW (555683) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (556063) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 206[0m
+[0;33mW (556193) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (556563) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 207[0m
+[0;33mW (557063) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 208[0m
+[0;33mW (557063) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (557183) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (557563) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 209[0m
+[0;33mW (557723) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (558063) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 210[0m
+[0;33mW (558213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (558563) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 211[0m
+[0;33mW (558693) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (559073) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 212[0m
+[0;33mW (559213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (559573) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 213[0m
+[0;33mW (559763) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (560073) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 214[0m
+[0;33mW (560233) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (560573) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 215[0m
+[0;33mW (560723) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (561073) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 216[0m
+[0;33mW (561273) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (561573) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 217[0m
+[0;33mW (561733) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (562073) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 218[0m
+[0;33mW (562243) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (562573) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 219[0m
+[0;33mW (563083) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 220[0m
+[0;33mW (563083) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (563583) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 221[0m
+[0;33mW (563583) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (564083) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 222[0m
+[0;33mW (564083) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (564583) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 223[0m
+[0;33mW (564583) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (565083) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 224[0m
+[0;33mW (565083) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (565583) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 225[0m
+[0;33mW (565583) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (566083) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 226[0m
+[0;33mW (566093) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (566583) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 227[0m
+[0;33mW (566593) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (566713) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (567093) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 228[0m
+[0;33mW (567593) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 229[0m
+[0;33mW (567593) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (567753) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (568093) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 230[0m
+[0;33mW (568213) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (568593) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 231[0m
+[0;33mW (568733) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (569093) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 232[0m
+[0;33mW (569593) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 233[0m
+[0;33mW (569593) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (569743) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (570093) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 234[0m
+[0;33mW (570263) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (570603) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 235[0m
+[0;33mW (570733) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (571103) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 236[0m
+[0;33mW (571253) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (571603) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 237[0m
+[0;33mW (571753) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (572103) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 238[0m
+[0;33mW (572303) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (572603) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 239[0m
+[0;33mW (572763) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (573103) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 240[0m
+[0;33mW (573293) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (573603) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 241[0m
+[0;33mW (573773) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (574103) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 242[0m
+[0;33mW (574303) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (574613) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 243[0m
+[0;33mW (574793) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (575113) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 244[0m
+[0;33mW (575613) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 245[0m
+[0;33mW (575613) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (576113) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 246[0m
+[0;33mW (576113) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (576613) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 247[0m
+[0;33mW (576613) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (577113) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 248[0m
+[0;33mW (577113) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (577613) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 249[0m
+[0;33mW (577613) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (578113) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 250[0m
+[0;33mW (578123) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (578623) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 251[0m
+[0;33mW (578623) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (579123) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 252[0m
+[0;33mW (579123) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (579253) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (579623) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 253[0m
+[0;33mW (580123) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 254[0m
+[0;33mW (580123) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (580263) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (580623) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 255[0m
+[0;33mW (580763) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (581283) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (582263) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (582803) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (583263) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (583763) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (584333) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (584803) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (585323) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (585793) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (586313) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (586803) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (587313) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (591823) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;33mW (592863) ZigBee Coordinator: Eroare la trimitere! Cod: 0xffffffff[0m
+[0;32mI (605843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (605843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (905843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (905843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (1205843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (1205843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (1505843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (1505843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (1805843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (1805843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (2105843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (2105843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (2405843) ZigBee Coordinator: == RAPORT 5 MINUTE ==[0m
+[0;32mI (2405843) ZigBee Coordinator: Trimise: 17850, Recepționate: 17766, Pierdute: 154[0m
+[0;32mI (336) esp_image: segment 4: paddr=000be7c8 vaddr=4080d5[0;32mI (349) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (350) boot: Disabling RNG early entropy source...[0m
+[0;32mI (361) cpu_start: Unicore app[0m
+[0;32mI (370) cpu_start: Pro cpu start user code[0m
+[0;32mI (370) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (371) app_init: Application information:[0m
+[0;32mI (373) app_init: Project name:     light_switch[0m
+[0;32mI (378) app_init: App version:      37a75c2[0m
+[0;32mI (383) app_init: Compile time:     May 27 2025 23:47:56[0m
+[0;32mI (389) app_init: ELF file SHA256:  67c71c520...[0m
+[0;32mI (394) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (400) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (404) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (409) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (414) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (421) heap_init: At 40819100 len 00034280 (208 KiB): RAM[0m
+[0;32mI (428) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (435) spi_flash: detected chip: generic[0m
+[0;32mI (438) spi_flash: flash io: dio[0m
+[0;33mW (442) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (456) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (462) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (470) main_task: Started on CPU0[0m
+[0;32mI (470) main_task: Calling app_main()[0m
+[0;32mI (470) CPU_FREQ: CPU frequency: 96000000 Hz[0m
+[0;32mI (480) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (490) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (500) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (510) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (530) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (530) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (550) ZigBee Coordinator: Zigbee stack initialized[0m
+[0;32mI (550) ZigBee Coordinator: TX Power is: 20[0m
+[0;32mI (550) ZigBee Coordinator: Channel is: 13[0m
+[0;32mI (570) ZigBee Coordinator: Device rebooted[0m
+[0;32mI (540) main_task: Returned from app_main()[0m
+[0;32mI (12050) ZigBee Coordinator: New device commissioned or rejoined (short: 0xf466)[0m
+[0;32mI (12090) ZigBee Coordinator: Found light[0m
+[0;32mI (12090) ZigBee Coordinator: Try to bind On/Off[0m
+[0;32mI (12090) ZigBee Coordinator: Bound successfully![0m
+[0;32mI (12100) ZigBee Coordinator: The light originating from address(0xf466) on endpoint(1)[0m
+[0;33mW (12760) ZigBee Coordinator: Timeout: Nu s-a primit raspuns pentru TSN 3[0m

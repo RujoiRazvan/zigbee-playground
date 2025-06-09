@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/CMakeFiles/bootloader
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/CMakeFiles/bootloader.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/CMakeFiles/bootloader-complete.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

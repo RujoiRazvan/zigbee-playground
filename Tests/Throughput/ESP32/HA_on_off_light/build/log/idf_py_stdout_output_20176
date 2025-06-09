@@ -1,0 +1,848 @@
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=4207002ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x1c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4080bfac
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x17ac
+load:0x4083cad0,len:0xef4
+load:0x4083efd0,len:0x2cd4
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun  6 2025 16:07:50[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=1171ch ( 71452) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00021744 vaddr=40800000 size=068d4h ( 26836) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6e980h (452992) map[0m
+[0;32mI (265) esp_image: segment 3: paddr=000969a8 vaddr=408068d4 size=079dch ( 31196) load[0m
+[0;32mI (276) esp_image: segment 4: paddr=0009e38c vaddr=4080e2b0 size=01fc0h (  8128) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (297) cpu_start: Unicore app[0m
+[0;32mI (306) cpu_start: Pro cpu start user code[0m
+[0;32mI (307) cpu_start: cpu freq: 64000000 Hz[0m
+[0;32mI (307) app_init: Application information:[0m
+[0;32mI (309) app_init: Project name:     light_bulb[0m
+[0;32mI (314) app_init: App version:      37a75c2[0m
+[0;32mI (319) app_init: Compile time:     Jun  6 2025 16:07:08[0m
+[0;32mI (325) app_init: ELF file SHA256:  1d8bf9590...[0m
+[0;32mI (330) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (336) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (340) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (345) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (357) heap_init: At 40819120 len 00034260 (208 KiB): RAM[0m
+[0;32mI (364) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (374) spi_flash: flash io: dio[0m
+[0;33mW (378) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (406) main_task: Started on CPU0[0m
+[0;32mI (406) main_task: Calling app_main()[0m
+[0;32mI (406) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (416) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (426) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (446) rmt: channel resolution loss, real=10666666[0m
+[0;32mI (446) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (466) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (466) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (496) main_task: Returned from app_main()[0m
+[0;32mI (506) ESP_ZigBee_ED_Light: TX Power is: 20[0m
+[0;32mI (2966) ESP_ZigBee_ED_Light: Failed to initialize Zigbee stack (status: ESP_FAIL)[0m
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0xc (SW_CPU),boot:0x1c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400031b6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x17ac
+load:0x4083cad0,len:0xef4
+load:0x4083efd0,len:0x2cd4
+entry 0x4083cada
+[0;32mI (22) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun  6 2025 16:07:50[0m
+[0;32mI (24) boot: chip revision: v0.1[0m
+[0;32mI (25) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (30) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (78) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (86) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=42070020 size=1171ch ( 71452) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00021744 vaddr=40800000 size=068d4h ( 26836) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=6e980h (452992) map[0m
+[0;32mI (362) esp_image: segment 3: paddr=000969a8 vaddr=408068d4 size=079dch ( 31196) load[0m
+[0;32mI (380) esp_image: segment 4: paddr=0009e38c vaddr=4080e2b0 size=01fc0h (  8128) load[0m
+[0;32mI (395) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (397) boot: Disabling RNG early entropy source...[0m
+[0;32mI (408) cpu_start: Unicore app[0m
+[0;32mI (417) cpu_start: Pro cpu start user code[0m
+[0;32mI (418) cpu_start: cpu freq: 64000000 Hz[0m
+[0;32mI (418) app_init: Application information:[0m
+[0;32mI (420) app_init: Project name:     light_bulb[0m
+[0;32mI (425) app_init: App version:      37a75c2[0m
+[0;32mI (430) app_init: Compile time:     Jun  6 2025 16:07:08[0m
+[0;32mI (436) app_init: ELF file SHA256:  1d8bf9590...[0m
+[0;32mI (441) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (447) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (451) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (456) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (461) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (468) heap_init: At 40819120 len 00034260 (208 KiB): RAM[0m
+[0;32mI (475) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (482) spi_flash: detected chip: generic[0m
+[0;32mI (485) spi_flash: flash io: dio[0m
+[0;33mW (489) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (503) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (509) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (517) main_task: Started on CPU0[0m
+[0;32mI (517) main_task: Calling app_main()[0m
+[0;32mI (517) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (527) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (537) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (557) rmt: channel resolution loss, real=10666666[0m
+[0;32mI (557) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (577) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (577) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (587) main_task: Returned from app_main()[0m
+[0;32mI (597) ESP_ZigBee_ED_Light: TX Power is: 20[0m
+[0;32mI (7117) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7117) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7137) ESP_ZigBee_ED_Light: Joined network successfully (Extended PAN ID: 74:4d:bd:ff:fe:60:1c:dc, PAN ID: 0x1aaa, Channel:13, Short Address: 0xbb56)[0m
+[0;32mI (7157) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7157) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7197) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7197) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7227) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7227) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7267) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7267) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7297) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7307) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7337) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7337) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7377) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7377) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7407) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7407) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7447) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7447) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7477) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7477) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7517) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7517) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7557) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7587) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7587) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7627) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7627) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7657) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7657) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7697) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7697) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7727) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7737) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7767) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7767) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7807) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7837) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7837) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7877) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7877) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7907) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7917) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (7947) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7947) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (7987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (7987) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8017) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8017) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8057) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8057) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8097) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8097) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8127) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8127) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8167) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8167) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8197) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8207) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8237) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8237) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8277) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8277) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8307) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8307) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8347) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8347) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8377) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8377) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8417) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8417) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8457) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8457) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8487) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8487) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8527) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8527) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8557) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8597) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8597) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8627) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8637) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8667) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8667) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8707) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8707) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8737) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8737) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8777) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8777) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8817) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8847) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8847) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8887) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8887) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8917) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8917) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (8957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8957) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (8987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (8997) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9027) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9027) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9067) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9097) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9097) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9137) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9137) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9167) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9167) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9207) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9207) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9247) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9247) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9277) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9287) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9317) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9317) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9357) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9357) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9387) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9387) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9427) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9427) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9457) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9457) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9497) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9497) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9527) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9537) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9567) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9567) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9607) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9607) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9637) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9637) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9677) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9677) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9707) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9717) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9747) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9747) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9787) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9787) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9817) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9817) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9857) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9857) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9887) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9887) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9927) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9927) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (9957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9967) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (9997) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (9997) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10037) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10037) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10067) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10107) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10107) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10147) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10147) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10177) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10177) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10217) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10217) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10247) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10257) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10287) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10287) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10327) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10327) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10357) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10357) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10397) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10397) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10437) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10437) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10467) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10477) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10507) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10507) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10547) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10547) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10577) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10577) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10617) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10617) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10647) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10657) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10687) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10687) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10727) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10727) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10757) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10757) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10797) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10797) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10827) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10837) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10867) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10867) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10907) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10907) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (10937) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10937) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (10977) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (10977) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11017) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11017) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11047) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11047) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11087) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11087) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11117) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11117) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11157) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11157) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11197) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11197) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11227) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11227) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11267) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11267) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11307) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11307) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11337) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11337) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11377) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11377) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11407) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11417) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11447) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11447) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11487) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11487) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11517) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11517) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11557) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11597) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11597) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11637) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11637) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11667) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11667) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11707) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11707) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11747) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11747) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11777) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11777) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11817) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11817) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11847) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11857) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11887) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11887) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11927) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11927) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (11957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11957) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (11997) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (11997) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12037) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12037) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12067) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12107) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12107) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12147) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12147) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12177) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12187) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12217) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12217) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12257) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12257) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12287) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12287) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12327) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12327) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12367) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12367) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12397) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12397) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12437) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12437) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12467) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12477) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12507) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12507) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12547) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12547) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12577) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12587) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12617) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12617) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12657) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12657) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12687) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12697) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12727) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12727) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12767) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12767) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12807) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12837) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12837) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12877) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12877) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12917) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12917) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (12947) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12947) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (12987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (12987) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13017) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13027) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13057) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13057) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13097) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13097) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13127) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13137) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13167) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13167) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13207) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13207) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13237) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13237) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13277) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13277) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13317) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13317) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13347) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13347) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13387) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13387) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13417) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13427) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13457) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13457) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13497) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13497) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13527) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13537) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13567) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13567) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13607) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13607) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13637) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13637) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13677) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13677) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13717) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13717) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13747) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13747) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13787) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13787) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13827) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13827) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13857) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13857) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13897) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13897) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (13937) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13937) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (13967) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (13977) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14007) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14007) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14047) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14047) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14077) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14077) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14117) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14117) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14157) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14157) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14187) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14187) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14227) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14227) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14267) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14267) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14297) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14297) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14337) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14337) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14367) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14377) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14407) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14407) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14447) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14447) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14477) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14477) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14517) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14517) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14557) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14587) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14587) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14627) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14627) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14667) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14667) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14697) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14697) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14737) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14737) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14767) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14777) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14807) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14847) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14847) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14877) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14877) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14917) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14917) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (14957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14957) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (14987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (14987) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15027) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15027) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15067) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15107) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15107) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15137) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15137) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15177) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15177) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15207) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15217) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15247) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15247) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15287) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15287) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15317) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15327) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15357) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15357) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15397) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15397) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15427) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15427) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15467) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15467) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15507) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15507) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15537) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15537) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15577) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15577) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15617) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15617) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15647) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15647) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15687) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15687) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15717) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15727) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15757) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15757) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15797) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15797) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15827) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15827) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15867) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15867) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15907) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15907) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (15937) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15937) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (15977) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (15977) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16017) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16017) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16047) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16047) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16087) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16087) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16117) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16127) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16157) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16157) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16197) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16197) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16237) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16237) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16267) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16277) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16307) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16307) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16347) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16347) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16377) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16377) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16417) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16417) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16447) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16457) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16487) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16487) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16527) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16527) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16557) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16597) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16597) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16637) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16637) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16667) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16667) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16707) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16707) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16747) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16747) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16777) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16787) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16817) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16817) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16857) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16857) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16887) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16887) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16927) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16927) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (16967) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16967) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (16997) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (16997) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17037) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17037) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17077) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17077) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17107) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17107) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17147) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17147) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17187) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17187) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17217) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17217) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17257) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17257) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17297) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17297) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17327) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17327) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17367) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17367) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17407) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17407) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17447) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17447) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17477) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17477) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17517) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17517) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17557) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17557) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17587) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17587) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17627) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17627) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17657) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17667) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17697) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17697) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17737) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17737) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17767) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17777) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17807) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17847) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17847) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17877) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17887) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17917) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17917) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (17957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17957) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (17987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (17987) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18027) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18027) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18067) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18097) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18097) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18137) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18137) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18177) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18177) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18217) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18217) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18257) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18257) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18287) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18287) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18327) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18327) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18367) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18367) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18397) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18397) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18437) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18437) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18477) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18477) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18507) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18507) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18547) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18547) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18587) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18587) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18627) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18627) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18657) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18667) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18697) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18697) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18737) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18737) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18767) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18777) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18807) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18807) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18847) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18847) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18877) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18887) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18917) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18917) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (18957) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18957) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (18987) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (18987) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19027) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19027) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19067) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19067) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19097) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19097) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19137) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19137) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19177) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19177) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19207) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19207) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19247) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19247) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19287) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19287) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19317) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19317) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19357) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19357) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19387) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19397) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19427) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19427) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19467) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19467) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19497) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19497) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19537) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19537) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19577) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19577) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19607) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19607) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19647) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19647) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19687) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19687) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19717) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19717) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19757) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19757) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19797) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19797) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19827) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19837) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19867) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19867) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19907) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19907) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (19937) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19937) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (19977) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (19977) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (20017) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20017) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (20047) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20047) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (20087) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20087) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (20117) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20127) ESP_ZigBee_ED_Light: Light sets to Off[0m
+[0;32mI (20157) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20157) ESP_ZigBee_ED_Light: Light sets to On[0m
+[0;32mI (20197) ESP_ZigBee_ED_Light: Received message: endpoint(1), cluster(0x6), attribute(0x0), data size(1)[0m
+[0;32mI (20197) ESP_ZigBee_ED_Light: Light sets to Off[0m

@@ -1,0 +1,35 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_light\build\bootloader\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/bootloader/bootloader.bin""
+Bootloader binary size 0x53d0 bytes. 0x2c30 bytes (35%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp_zb_light.c.obj
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/main/esp_zb_light.c: In function 'read_button_state':
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/main/esp_zb_light.c:94:28: warning: passing argument 1 of 'esp_zb_scheduler_alarm' from incompatible pointer type [-Wincompatible-pointer-types]
+   94 |     esp_zb_scheduler_alarm(read_button_state, NULL, 10000); // Rulează la fiecare 10 secunde
+      |                            ^~~~~~~~~~~~~~~~~
+      |                            |
+      |                            void (*)()
+In file included from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h:12,
+                 from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/main/esp_zb_light.c:11:
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/managed_components/espressif__esp-zigbee-lib/include/esp_zigbee_core.h:622:47: note: expected 'esp_zb_callback_t' {aka 'void (*)(unsigned char)'} but argument is of type 'void (*)()'
+  622 | void esp_zb_scheduler_alarm(esp_zb_callback_t cb, uint8_t param, uint32_t time);
+      |                             ~~~~~~~~~~~~~~~~~~^~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/main/esp_zb_light.c:94:47: warning: passing argument 2 of 'esp_zb_scheduler_alarm' makes integer from pointer without a cast [-Wint-conversion]
+   94 |     esp_zb_scheduler_alarm(read_button_state, NULL, 10000); // Rulează la fiecare 10 secunde
+      |                                               ^~~~
+      |                                               |
+      |                                               void *
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/managed_components/espressif__esp-zigbee-lib/include/esp_zigbee_core.h:622:59: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'void *'
+  622 | void esp_zb_scheduler_alarm(esp_zb_callback_t cb, uint8_t param, uint32_t time);
+      |                                                   ~~~~~~~~^~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Building C object CMakeFiles/light_bulb.elf.dir/project_elf_src_esp32h2.c.obj
+[6/8] Linking CXX executable light_bulb.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32h2 image...
+Merged 1 ELF section
+Successfully created esp32h2 image.
+Generated H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/light_bulb.bin
+[8/8] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_light\build\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/partition_table/partition-table.bin" "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/light_bulb.bin""
+light_bulb.bin binary size 0x90370 bytes. Smallest app partition is 0xe1000 bytes. 0x50c90 bytes (36%) free.

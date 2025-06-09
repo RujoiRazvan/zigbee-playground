@@ -1,0 +1,71 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_switch\build\bootloader\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/bootloader.bin""
+Bootloader binary size 0x53d0 bytes. 0x2c30 bytes (35%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp_zb_switch.c.obj
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c: In function 'esp_zb_task':
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:235:53: warning: passing argument 1 of 'esp_zb_zcl_command_send_status_handler_register' from incompatible pointer type [-Wincompatible-pointer-types]
+  235 |     esp_zb_zcl_command_send_status_handler_register(my_zcl_send_status_cb);
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~
+      |                                                     |
+      |                                                     void (*)(const esp_zb_zcl_command_send_status_message_t *) {aka void (*)(const struct esp_zb_zcl_command_send_status_s *)}
+In file included from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zigbee-lib/include/ha/esp_zigbee_ha_standard.h:12,
+                 from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:21:
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zigbee-lib/include/esp_zigbee_core.h:239:96: note: expected 'esp_zb_zcl_command_send_status_callback_t' {aka 'void (*)(struct esp_zb_zcl_command_send_status_s)'} but argument is of type 'void (*)(const esp_zb_zcl_command_send_status_message_t *)' {aka 'void (*)(const struct esp_zb_zcl_command_send_status_s *)'}
+  239 | void esp_zb_zcl_command_send_status_handler_register(esp_zb_zcl_command_send_status_callback_t cb);
+      |                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+In file included from D:/ESP-IDF/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from D:/ESP-IDF/components/esp_hw_support/include/esp_cpu.h:20,
+                 from D:/ESP-IDF/components/esp_hw_support/include/spinlock.h:11,
+                 from D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos/portmacro.h:65,
+                 from D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:17:
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:236:40: warning: passing argument 1 of 'zb_zcl_register_cb' makes integer from pointer without a cast [-Wint-conversion]
+  236 |     ESP_ERROR_CHECK(zb_zcl_register_cb(esp_zb_on_off_switch_ep, my_zcl_send_status_cb));
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        esp_zb_ep_list_t * {aka struct esp_zb_ep_list_s *}
+D:/ESP-IDF/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zboss-lib/include/zboss_api_zcl.h:47,
+                 from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zboss-lib/include/zboss_api.h:60,
+                 from H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:26:
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zboss-lib/include/zcl/zb_zcl_common.h:2301:40: note: expected 'zb_uint8_t' {aka 'unsigned char'} but argument is of type 'esp_zb_ep_list_t *' {aka 'struct esp_zb_ep_list_s *'}
+ 2301 | zb_ret_t zb_zcl_register_cb(zb_uint8_t param, zb_callback_t cb);
+      |                             ~~~~~~~~~~~^~~~~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:236:65: warning: passing argument 2 of 'zb_zcl_register_cb' from incompatible pointer type [-Wincompatible-pointer-types]
+  236 |     ESP_ERROR_CHECK(zb_zcl_register_cb(esp_zb_on_off_switch_ep, my_zcl_send_status_cb));
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~
+      |                                                                 |
+      |                                                                 void (*)(const esp_zb_zcl_command_send_status_message_t *) {aka void (*)(const struct esp_zb_zcl_command_send_status_s *)}
+D:/ESP-IDF/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/managed_components/espressif__esp-zboss-lib/include/zcl/zb_zcl_common.h:2301:61: note: expected 'zb_callback_t' {aka 'void (*)(unsigned char)'} but argument is of type 'void (*)(const esp_zb_zcl_command_send_status_message_t *)' {aka 'void (*)(const struct esp_zb_zcl_command_send_status_s *)'}
+ 2301 | zb_ret_t zb_zcl_register_cb(zb_uint8_t param, zb_callback_t cb);
+      |                                               ~~~~~~~~~~~~~~^~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c: At top level:
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:55:13: warning: 'esp_zb_buttons_handler' defined but not used [-Wunused-function]
+   55 | static void esp_zb_buttons_handler(switch_func_pair_t *button_func_pair)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:49:27: warning: 'button_func_pair' defined but not used [-Wunused-variable]
+   49 | static switch_func_pair_t button_func_pair[] = {
+      |                           ^~~~~~~~~~~~~~~~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:42:17: warning: 'last_log_time_ms' defined but not used [-Wunused-variable]
+   42 | static uint32_t last_log_time_ms = 0;
+      |                 ^~~~~~~~~~~~~~~~
+H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/main/esp_zb_switch.c:41:17: warning: 'message_count' defined but not used [-Wunused-variable]
+   41 | static uint32_t message_count = 0;
+      |                 ^~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable light_switch.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32h2 image...
+Merged 1 ELF section
+Successfully created esp32h2 image.
+Generated H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/light_switch.bin
+[7/7] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_switch\build\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/partition_table/partition-table.bin" "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/light_switch.bin""
+light_switch.bin binary size 0xb03c0 bytes. Smallest app partition is 0xe1000 bytes. 0x30c40 bytes (22%) free.

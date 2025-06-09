@@ -1,0 +1,48 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40017bc8: __riscv_restore_3 in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x40808412: vPortClearInterruptMaskFromISR at D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:528
+0x4080847a: vPortExitCritical at D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:632
+[0m
+[0;33m0x42027f4c: zb_parse_mhr_ptr at ??:?
+[0m
+[0;33m0x4207e7ea: event_write at D:/ESP-IDF/components/vfs/vfs_eventfd.c:243
+[0m
+[0;33m0x42075c0e: zb_osif_enable_all_interrupts at ??:?
+[0m
+[0;33m0x42088e56: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1528 (discriminator 75)
+0x420877d2: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/riscv32-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:851
+[0m
+[0;33m0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m0x40808412: vPortClearInterruptMaskFromISR at D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:528
+0x4080847a: vPortExitCritical at D:/ESP-IDF/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:632
+[0m
+[0;33m0x42027f4c: zb_parse_mhr_ptr at ??:?
+[0m
+[0;33m0x4207e7ea: event_write at D:/ESP-IDF/components/vfs/vfs_eventfd.c:243
+[0m
+[0;33m0x42075c0e: zb_osif_enable_all_interrupts at ??:?
+[0m
+[0;33m0x4201fb6e: zb_bufpool_storage_bufid_to_buf at ??:?
+0x4201f1fe: zb_buf_cut_left_func at ??:?
+[0m
+[0;33m0x42027f4c: zb_parse_mhr_ptr at ??:?
+[0m
+[0;33m0x42036760: mcps_indication_process_in at ??:?
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "D:\ESP-IDF\tools/idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt

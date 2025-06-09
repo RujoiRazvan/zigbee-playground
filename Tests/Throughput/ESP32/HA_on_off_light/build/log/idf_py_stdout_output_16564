@@ -1,0 +1,59 @@
+[1/5] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_light\build\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/partition_table/partition-table.bin" "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/light_bulb.bin""
+light_bulb.bin binary size 0x90370 bytes. Smallest app partition is 0xe1000 bytes. 0x50c90 bytes (36%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D "H:\STM32WB5MM-DK Project\zigbee-playground\Tests\Throughput\ESP32\HA_on_off_light\build\bootloader\esp-idf\esptool_py" && D:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/ESP-IDF/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 "H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build/bootloader/bootloader.bin""
+Bootloader binary size 0x53d0 bytes. 0x2c30 bytes (35%) free.
+[2/3] cmd.exe /C "cd /D D:\ESP-IDF\components\esptool_py && D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/ESP-IDF -D SERIAL_TOOL=D:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;D:/ESP-IDF/components/esptool_py/esptool/esptool.py;--chip;esp32h2 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=H:/STM3esptool.py --chip esp32h2 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 48m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 light_bulb.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port COM3
+Connecting...
+Chip is ESP32-H2 (revision v0.1)
+Features: BLE, IEEE802.15.4
+Crystal is 32MHz
+MAC: 74:4d:bd:ff:fe:60:1c:dc
+BASE MAC: 74:4d:bd:60:1c:dc
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000a0fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21456 bytes to 12964...
+Writing at 0x00000000... (100 %)
+Wrote 21456 bytes (12964 compressed) at 0x00000000 in 0.3 seconds (effective 505.3 kbit/s)...
+Hash of data verified.
+Compressed 590704 bytes to 309600...
+Writing at 0x00010000... (5 %)
+Writing at 0x0001e1a3... (10 %)
+Writing at 0x0002523c... (15 %)
+Writing at 0x0002bce5... (21 %)
+Writing at 0x0003358b... (26 %)
+Writing at 0x0003b6f2... (31 %)
+Writing at 0x00042af4... (36 %)
+Writing at 0x0004a240... (42 %)
+Writing at 0x00051658... (47 %)
+Writing at 0x000589de... (52 %)
+Writing at 0x0005f3e2... (57 %)
+Writing at 0x00067f2d... (63 %)
+Writing at 0x0006f0b5... (68 %)
+Writing at 0x00076678... (73 %)
+Writing at 0x0007dd8d... (78 %)
+Writing at 0x00084cd3... (84 %)
+Writing at 0x0008aa0d... (89 %)
+Writing at 0x000926d8... (94 %)
+Writing at 0x000994c3... (100 %)
+Wrote 590704 bytes (309600 compressed) at 0x00010000 in 3.5 seconds (effective 1332.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 136...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (136 compressed) at 0x00008000 in 0.0 seconds (effective 540.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+2WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_light/build" -P D:/ESP-IDF/components/esptool_py/run_serial_tool.cmake"

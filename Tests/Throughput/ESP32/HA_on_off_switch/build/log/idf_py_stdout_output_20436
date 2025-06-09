@@ -1,0 +1,1347 @@
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=4209802[0;32mI (495) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x1e (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200ca7e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x17ac
+load:0x4083cad0,len:0xef4
+load:0x4083efd0,len:0x2cd4
+entry 0x4083cada
+[0;32mI (23) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time May 27 2025 23:50:23[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (31) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 000e1000[0m
+[0;32mI (79) boot:  3 zb_storage       Unknown data     01 81 000f1000 00004000[0m
+[0;32mI (87) boot:  4 zb_fct           Unknown data     01 81 000f5000 00000400[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=42098020 size=114ech ( 70892) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00021514 vaddr=40800000 size=06b04h ( 27396) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=902b8h (590520) map[0m
+[0;32mI (304) esp_image: segment 3: paddr=000b82e0 vaddr=40806b04 size=06bf0h ( 27632) load[0m
+[0;32mI (314) esp_image: segment 4: paddr=000beed8 vaddr=4080d700 size=01e44h (  7748) load[0m
+[0;32mI (322) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Unicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (345) app_init: Application information:[0m
+[0;32mI (347) app_init: Project name:     light_switch[0m
+[0;32mI (352) app_init: App version:      37a75c2[0m
+[0;32mI (357) app_init: Compile time:     May 27 2025 23:47:56[0m
+[0;32mI (363) app_init: ELF file SHA256:  5a0313c92...[0m
+[0;32mI (368) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (373) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (378) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (383) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (388) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (395) heap_init: At 40819290 len 000340F0 (208 KiB): RAM[0m
+[0;32mI (401) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (408) spi_flash: detected chip: generic[0m
+[0;32mI (412) spi_flash: flash io: dio[0m
+[0;33mW (416) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (429) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (436) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (443) main_task: Started on CPU0[0m
+[0;32mI (443) main_task: Calling app_main()[0m
+[0;32mI (443) CPU_FREQ: CPU frequency: 96000000 Hz[0m
+[0;32mI (453) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (463) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (473) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (483) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (493) gpio: GPIO[9]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (513) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (513) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (523) main_task: Returned from app_main()[0m
+[0;32mI (533) ZigBee Coordinator: Zigbee stack initialized[0m
+[0;32mI (533) ZigBee Coordinator: TX Power is: 20[0m
+[0;32mI (533) ZigBee Coordinator: Channel is: 13[0m
+[0;32mI (553) ZigBee Coordinator: Device rebooted[0m
+[0;32mI (3293) ZigBee Coordinator: Send 'on_off toggle' command[0m
+[0;33mW (3293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3293) ZCL_CB: Comanda trimisă cu succes. TSN: 0[0m
+[0;33mW (3293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3303) ZCL_CB: Comanda trimisă cu succes. TSN: 1[0m
+[0;33mW (3303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3313) ZCL_CB: Comanda trimisă cu succes. TSN: 2[0m
+[0;33mW (3313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3323) ZCL_CB: Comanda trimisă cu succes. TSN: 3[0m
+[0;33mW (3333) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3333) ZCL_CB: Comanda trimisă cu succes. TSN: 4[0m
+[0;33mW (3343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3343) ZCL_CB: Comanda trimisă cu succes. TSN: 5[0m
+[0;33mW (3353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3353) ZCL_CB: Comanda trimisă cu succes. TSN: 6[0m
+[0;33mW (3363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3363) ZCL_CB: Comanda trimisă cu succes. TSN: 7[0m
+[0;33mW (3373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3373) ZCL_CB: Comanda trimisă cu succes. TSN: 8[0m
+[0;33mW (3383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3393) ZCL_CB: Comanda trimisă cu succes. TSN: 9[0m
+[0;33mW (3393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3403) ZCL_CB: Comanda trimisă cu succes. TSN: 10[0m
+[0;33mW (3403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3413) ZCL_CB: Comanda trimisă cu succes. TSN: 11[0m
+[0;33mW (3423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3423) ZCL_CB: Comanda trimisă cu succes. TSN: 12[0m
+[0;33mW (3433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3433) ZCL_CB: Comanda trimisă cu succes. TSN: 13[0m
+[0;33mW (3443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3443) ZCL_CB: Comanda trimisă cu succes. TSN: 14[0m
+[0;33mW (3453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3453) ZCL_CB: Comanda trimisă cu succes. TSN: 15[0m
+[0;33mW (3463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3463) ZCL_CB: Comanda trimisă cu succes. TSN: 16[0m
+[0;33mW (3473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3483) ZCL_CB: Comanda trimisă cu succes. TSN: 17[0m
+[0;33mW (3483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3493) ZCL_CB: Comanda trimisă cu succes. TSN: 18[0m
+[0;33mW (3493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3503) ZCL_CB: Comanda trimisă cu succes. TSN: 19[0m
+[0;33mW (3503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3513) ZCL_CB: Comanda trimisă cu succes. TSN: 20[0m
+[0;33mW (3523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3523) ZCL_CB: Comanda trimisă cu succes. TSN: 21[0m
+[0;33mW (3533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3533) ZCL_CB: Comanda trimisă cu succes. TSN: 22[0m
+[0;33mW (3543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3543) ZCL_CB: Comanda trimisă cu succes. TSN: 23[0m
+[0;33mW (3553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3553) ZCL_CB: Comanda trimisă cu succes. TSN: 24[0m
+[0;33mW (3563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3563) ZCL_CB: Comanda trimisă cu succes. TSN: 25[0m
+[0;33mW (3573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3583) ZCL_CB: Comanda trimisă cu succes. TSN: 26[0m
+[0;33mW (3583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3593) ZCL_CB: Comanda trimisă cu succes. TSN: 27[0m
+[0;33mW (3593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3603) ZCL_CB: Comanda trimisă cu succes. TSN: 28[0m
+[0;33mW (3613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3613) ZCL_CB: Comanda trimisă cu succes. TSN: 29[0m
+[0;33mW (3623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3623) ZCL_CB: Comanda trimisă cu succes. TSN: 30[0m
+[0;33mW (3633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3633) ZCL_CB: Comanda trimisă cu succes. TSN: 31[0m
+[0;33mW (3643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3643) ZCL_CB: Comanda trimisă cu succes. TSN: 32[0m
+[0;33mW (3653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3653) ZCL_CB: Comanda trimisă cu succes. TSN: 33[0m
+[0;33mW (3663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3673) ZCL_CB: Comanda trimisă cu succes. TSN: 34[0m
+[0;33mW (3673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3683) ZCL_CB: Comanda trimisă cu succes. TSN: 35[0m
+[0;33mW (3683) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3693) ZCL_CB: Comanda trimisă cu succes. TSN: 36[0m
+[0;33mW (3703) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3703) ZCL_CB: Comanda trimisă cu succes. TSN: 37[0m
+[0;33mW (3713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3713) ZCL_CB: Comanda trimisă cu succes. TSN: 38[0m
+[0;33mW (3723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3723) ZCL_CB: Comanda trimisă cu succes. TSN: 39[0m
+[0;33mW (3733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3733) ZCL_CB: Comanda trimisă cu succes. TSN: 40[0m
+[0;33mW (3743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3743) ZCL_CB: Comanda trimisă cu succes. TSN: 41[0m
+[0;33mW (3753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3763) ZCL_CB: Comanda trimisă cu succes. TSN: 42[0m
+[0;33mW (3763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3773) ZCL_CB: Comanda trimisă cu succes. TSN: 43[0m
+[0;33mW (3773) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3783) ZCL_CB: Comanda trimisă cu succes. TSN: 44[0m
+[0;33mW (3783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3793) ZCL_CB: Comanda trimisă cu succes. TSN: 45[0m
+[0;33mW (3803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3803) ZCL_CB: Comanda trimisă cu succes. TSN: 46[0m
+[0;33mW (3813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3813) ZCL_CB: Comanda trimisă cu succes. TSN: 47[0m
+[0;33mW (3823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3823) ZCL_CB: Comanda trimisă cu succes. TSN: 48[0m
+[0;33mW (3833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3833) ZCL_CB: Comanda trimisă cu succes. TSN: 49[0m
+[0;33mW (3843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3843) ZCL_CB: Comanda trimisă cu succes. TSN: 50[0m
+[0;33mW (3853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3863) ZCL_CB: Comanda trimisă cu succes. TSN: 51[0m
+[0;33mW (3863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3873) ZCL_CB: Comanda trimisă cu succes. TSN: 52[0m
+[0;33mW (3873) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3883) ZCL_CB: Comanda trimisă cu succes. TSN: 53[0m
+[0;33mW (3893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3893) ZCL_CB: Comanda trimisă cu succes. TSN: 54[0m
+[0;33mW (3903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3903) ZCL_CB: Comanda trimisă cu succes. TSN: 55[0m
+[0;33mW (3913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3913) ZCL_CB: Comanda trimisă cu succes. TSN: 56[0m
+[0;33mW (3923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3923) ZCL_CB: Comanda trimisă cu succes. TSN: 57[0m
+[0;33mW (3933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3933) ZCL_CB: Comanda trimisă cu succes. TSN: 58[0m
+[0;33mW (3943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3953) ZCL_CB: Comanda trimisă cu succes. TSN: 59[0m
+[0;33mW (3953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3963) ZCL_CB: Comanda trimisă cu succes. TSN: 60[0m
+[0;33mW (3963) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3973) ZCL_CB: Comanda trimisă cu succes. TSN: 61[0m
+[0;33mW (3983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3983) ZCL_CB: Comanda trimisă cu succes. TSN: 62[0m
+[0;33mW (3993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (3993) ZCL_CB: Comanda trimisă cu succes. TSN: 63[0m
+[0;33mW (4003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4003) ZCL_CB: Comanda trimisă cu succes. TSN: 64[0m
+[0;33mW (4013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4013) ZCL_CB: Comanda trimisă cu succes. TSN: 65[0m
+[0;33mW (4023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4023) ZCL_CB: Comanda trimisă cu succes. TSN: 66[0m
+[0;33mW (4033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4043) ZCL_CB: Comanda trimisă cu succes. TSN: 67[0m
+[0;33mW (4043) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4053) ZCL_CB: Comanda trimisă cu succes. TSN: 68[0m
+[0;33mW (4053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4063) ZCL_CB: Comanda trimisă cu succes. TSN: 69[0m
+[0;33mW (4063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4073) ZCL_CB: Comanda trimisă cu succes. TSN: 70[0m
+[0;33mW (4083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4083) ZCL_CB: Comanda trimisă cu succes. TSN: 71[0m
+[0;33mW (4093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4093) ZCL_CB: Comanda trimisă cu succes. TSN: 72[0m
+[0;33mW (4103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4103) ZCL_CB: Comanda trimisă cu succes. TSN: 73[0m
+[0;33mW (4113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4113) ZCL_CB: Comanda trimisă cu succes. TSN: 74[0m
+[0;33mW (4123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4123) ZCL_CB: Comanda trimisă cu succes. TSN: 75[0m
+[0;33mW (4133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4143) ZCL_CB: Comanda trimisă cu succes. TSN: 76[0m
+[0;33mW (4143) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4153) ZCL_CB: Comanda trimisă cu succes. TSN: 77[0m
+[0;33mW (4153) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4163) ZCL_CB: Comanda trimisă cu succes. TSN: 78[0m
+[0;33mW (4173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4173) ZCL_CB: Comanda trimisă cu succes. TSN: 79[0m
+[0;33mW (4183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4183) ZCL_CB: Comanda trimisă cu succes. TSN: 80[0m
+[0;33mW (4193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4193) ZCL_CB: Comanda trimisă cu succes. TSN: 81[0m
+[0;33mW (4203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4203) ZCL_CB: Comanda trimisă cu succes. TSN: 82[0m
+[0;33mW (4213) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4213) ZCL_CB: Comanda trimisă cu succes. TSN: 83[0m
+[0;33mW (4223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4233) ZCL_CB: Comanda trimisă cu succes. TSN: 84[0m
+[0;33mW (4233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4243) ZCL_CB: Comanda trimisă cu succes. TSN: 85[0m
+[0;33mW (4243) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4253) ZCL_CB: Comanda trimisă cu succes. TSN: 86[0m
+[0;33mW (4253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4263) ZCL_CB: Comanda trimisă cu succes. TSN: 87[0m
+[0;33mW (4273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4273) ZCL_CB: Comanda trimisă cu succes. TSN: 88[0m
+[0;33mW (4283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4283) ZCL_CB: Comanda trimisă cu succes. TSN: 89[0m
+[0;33mW (4293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4293) ZCL_CB: Comanda trimisă cu succes. TSN: 90[0m
+[0;33mW (4303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4303) ZCL_CB: Comanda trimisă cu succes. TSN: 91[0m
+[0;33mW (4313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4313) ZCL_CB: Comanda trimisă cu succes. TSN: 92[0m
+[0;33mW (4323) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4333) ZCL_CB: Comanda trimisă cu succes. TSN: 93[0m
+[0;33mW (4333) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4343) ZCL_CB: Comanda trimisă cu succes. TSN: 94[0m
+[0;33mW (4343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4353) ZCL_CB: Comanda trimisă cu succes. TSN: 95[0m
+[0;33mW (4363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4363) ZCL_CB: Comanda trimisă cu succes. TSN: 96[0m
+[0;33mW (4373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4373) ZCL_CB: Comanda trimisă cu succes. TSN: 97[0m
+[0;33mW (4383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4383) ZCL_CB: Comanda trimisă cu succes. TSN: 98[0m
+[0;33mW (4393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4393) ZCL_CB: Comanda trimisă cu succes. TSN: 99[0m
+[0;33mW (4403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4403) ZCL_CB: Comanda trimisă cu succes. TSN: 100[0m
+[0;33mW (4413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4423) ZCL_CB: Comanda trimisă cu succes. TSN: 101[0m
+[0;33mW (4423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4433) ZCL_CB: Comanda trimisă cu succes. TSN: 102[0m
+[0;33mW (4433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4443) ZCL_CB: Comanda trimisă cu succes. TSN: 103[0m
+[0;33mW (4453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4453) ZCL_CB: Comanda trimisă cu succes. TSN: 104[0m
+[0;33mW (4463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4463) ZCL_CB: Comanda trimisă cu succes. TSN: 105[0m
+[0;33mW (4473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4473) ZCL_CB: Comanda trimisă cu succes. TSN: 106[0m
+[0;33mW (4483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4483) ZCL_CB: Comanda trimisă cu succes. TSN: 107[0m
+[0;33mW (4493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4493) ZCL_CB: Comanda trimisă cu succes. TSN: 108[0m
+[0;33mW (4503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4513) ZCL_CB: Comanda trimisă cu succes. TSN: 109[0m
+[0;33mW (4513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4523) ZCL_CB: Comanda trimisă cu succes. TSN: 110[0m
+[0;33mW (4523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4533) ZCL_CB: Comanda trimisă cu succes. TSN: 111[0m
+[0;33mW (4543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4543) ZCL_CB: Comanda trimisă cu succes. TSN: 112[0m
+[0;33mW (4553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4553) ZCL_CB: Comanda trimisă cu succes. TSN: 113[0m
+[0;33mW (4563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4563) ZCL_CB: Comanda trimisă cu succes. TSN: 114[0m
+[0;33mW (4573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4573) ZCL_CB: Comanda trimisă cu succes. TSN: 115[0m
+[0;33mW (4583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4593) ZCL_CB: Comanda trimisă cu succes. TSN: 116[0m
+[0;33mW (4593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4603) ZCL_CB: Comanda trimisă cu succes. TSN: 117[0m
+[0;33mW (4603) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4613) ZCL_CB: Comanda trimisă cu succes. TSN: 118[0m
+[0;33mW (4613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4623) ZCL_CB: Comanda trimisă cu succes. TSN: 119[0m
+[0;33mW (4633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4633) ZCL_CB: Comanda trimisă cu succes. TSN: 120[0m
+[0;33mW (4643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4643) ZCL_CB: Comanda trimisă cu succes. TSN: 121[0m
+[0;33mW (4653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4653) ZCL_CB: Comanda trimisă cu succes. TSN: 122[0m
+[0;33mW (4663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4663) ZCL_CB: Comanda trimisă cu succes. TSN: 123[0m
+[0;33mW (4673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4683) ZCL_CB: Comanda trimisă cu succes. TSN: 124[0m
+[0;33mW (4683) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4693) ZCL_CB: Comanda trimisă cu succes. TSN: 125[0m
+[0;33mW (4693) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4703) ZCL_CB: Comanda trimisă cu succes. TSN: 126[0m
+[0;33mW (4713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4713) ZCL_CB: Comanda trimisă cu succes. TSN: 127[0m
+[0;33mW (4723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4723) ZCL_CB: Comanda trimisă cu succes. TSN: 128[0m
+[0;33mW (4733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4733) ZCL_CB: Comanda trimisă cu succes. TSN: 129[0m
+[0;33mW (4743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4743) ZCL_CB: Comanda trimisă cu succes. TSN: 130[0m
+[0;33mW (4753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4753) ZCL_CB: Comanda trimisă cu succes. TSN: 131[0m
+[0;33mW (4763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4773) ZCL_CB: Comanda trimisă cu succes. TSN: 132[0m
+[0;33mW (4773) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4783) ZCL_CB: Comanda trimisă cu succes. TSN: 133[0m
+[0;33mW (4783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4793) ZCL_CB: Comanda trimisă cu succes. TSN: 134[0m
+[0;33mW (4803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4803) ZCL_CB: Comanda trimisă cu succes. TSN: 135[0m
+[0;33mW (4813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4813) ZCL_CB: Comanda trimisă cu succes. TSN: 136[0m
+[0;33mW (4823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4823) ZCL_CB: Comanda trimisă cu succes. TSN: 137[0m
+[0;33mW (4833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4833) ZCL_CB: Comanda trimisă cu succes. TSN: 138[0m
+[0;33mW (4843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4843) ZCL_CB: Comanda trimisă cu succes. TSN: 139[0m
+[0;33mW (4853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4863) ZCL_CB: Comanda trimisă cu succes. TSN: 140[0m
+[0;33mW (4863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4873) ZCL_CB: Comanda trimisă cu succes. TSN: 141[0m
+[0;33mW (4873) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4883) ZCL_CB: Comanda trimisă cu succes. TSN: 142[0m
+[0;33mW (4893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4893) ZCL_CB: Comanda trimisă cu succes. TSN: 143[0m
+[0;33mW (4903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4903) ZCL_CB: Comanda trimisă cu succes. TSN: 144[0m
+[0;33mW (4913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4913) ZCL_CB: Comanda trimisă cu succes. TSN: 145[0m
+[0;33mW (4923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4923) ZCL_CB: Comanda trimisă cu succes. TSN: 146[0m
+[0;33mW (4933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4933) ZCL_CB: Comanda trimisă cu succes. TSN: 147[0m
+[0;33mW (4943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4953) ZCL_CB: Comanda trimisă cu succes. TSN: 148[0m
+[0;33mW (4953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4963) ZCL_CB: Comanda trimisă cu succes. TSN: 149[0m
+[0;33mW (4963) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4973) ZCL_CB: Comanda trimisă cu succes. TSN: 150[0m
+[0;33mW (4983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4983) ZCL_CB: Comanda trimisă cu succes. TSN: 151[0m
+[0;33mW (4993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (4993) ZCL_CB: Comanda trimisă cu succes. TSN: 152[0m
+[0;33mW (5003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5003) ZCL_CB: Comanda trimisă cu succes. TSN: 153[0m
+[0;33mW (5013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5013) ZCL_CB: Comanda trimisă cu succes. TSN: 154[0m
+[0;33mW (5023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5033) ZCL_CB: Comanda trimisă cu succes. TSN: 155[0m
+[0;33mW (5033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5043) ZCL_CB: Comanda trimisă cu succes. TSN: 156[0m
+[0;33mW (5043) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5053) ZCL_CB: Comanda trimisă cu succes. TSN: 157[0m
+[0;33mW (5053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5063) ZCL_CB: Comanda trimisă cu succes. TSN: 158[0m
+[0;33mW (5073) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5073) ZCL_CB: Comanda trimisă cu succes. TSN: 159[0m
+[0;33mW (5083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5083) ZCL_CB: Comanda trimisă cu succes. TSN: 160[0m
+[0;33mW (5093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5093) ZCL_CB: Comanda trimisă cu succes. TSN: 161[0m
+[0;33mW (5103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5103) ZCL_CB: Comanda trimisă cu succes. TSN: 162[0m
+[0;33mW (5113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5123) ZCL_CB: Comanda trimisă cu succes. TSN: 163[0m
+[0;33mW (5123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5133) ZCL_CB: Comanda trimisă cu succes. TSN: 164[0m
+[0;33mW (5133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5143) ZCL_CB: Comanda trimisă cu succes. TSN: 165[0m
+[0;33mW (5153) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5153) ZCL_CB: Comanda trimisă cu succes. TSN: 166[0m
+[0;33mW (5163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5163) ZCL_CB: Comanda trimisă cu succes. TSN: 167[0m
+[0;33mW (5173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5173) ZCL_CB: Comanda trimisă cu succes. TSN: 168[0m
+[0;33mW (5183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5183) ZCL_CB: Comanda trimisă cu succes. TSN: 169[0m
+[0;33mW (5193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5193) ZCL_CB: Comanda trimisă cu succes. TSN: 170[0m
+[0;33mW (5203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5213) ZCL_CB: Comanda trimisă cu succes. TSN: 171[0m
+[0;33mW (5213) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5223) ZCL_CB: Comanda trimisă cu succes. TSN: 172[0m
+[0;33mW (5223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5233) ZCL_CB: Comanda trimisă cu succes. TSN: 173[0m
+[0;33mW (5243) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5243) ZCL_CB: Comanda trimisă cu succes. TSN: 174[0m
+[0;33mW (5253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5253) ZCL_CB: Comanda trimisă cu succes. TSN: 175[0m
+[0;33mW (5263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5263) ZCL_CB: Comanda trimisă cu succes. TSN: 176[0m
+[0;33mW (5273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5273) ZCL_CB: Comanda trimisă cu succes. TSN: 177[0m
+[0;33mW (5283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5283) ZCL_CB: Comanda trimisă cu succes. TSN: 178[0m
+[0;33mW (5293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5303) ZCL_CB: Comanda trimisă cu succes. TSN: 179[0m
+[0;33mW (5303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5313) ZCL_CB: Comanda trimisă cu succes. TSN: 180[0m
+[0;33mW (5313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5323) ZCL_CB: Comanda trimisă cu succes. TSN: 181[0m
+[0;33mW (5333) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5333) ZCL_CB: Comanda trimisă cu succes. TSN: 182[0m
+[0;33mW (5343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5343) ZCL_CB: Comanda trimisă cu succes. TSN: 183[0m
+[0;33mW (5353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5353) ZCL_CB: Comanda trimisă cu succes. TSN: 184[0m
+[0;33mW (5363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5363) ZCL_CB: Comanda trimisă cu succes. TSN: 185[0m
+[0;33mW (5373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5373) ZCL_CB: Comanda trimisă cu succes. TSN: 186[0m
+[0;33mW (5383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5393) ZCL_CB: Comanda trimisă cu succes. TSN: 187[0m
+[0;33mW (5393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5403) ZCL_CB: Comanda trimisă cu succes. TSN: 188[0m
+[0;33mW (5403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5413) ZCL_CB: Comanda trimisă cu succes. TSN: 189[0m
+[0;33mW (5423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5423) ZCL_CB: Comanda trimisă cu succes. TSN: 190[0m
+[0;33mW (5433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5433) ZCL_CB: Comanda trimisă cu succes. TSN: 191[0m
+[0;33mW (5443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5443) ZCL_CB: Comanda trimisă cu succes. TSN: 192[0m
+[0;33mW (5453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5453) ZCL_CB: Comanda trimisă cu succes. TSN: 193[0m
+[0;33mW (5463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5473) ZCL_CB: Comanda trimisă cu succes. TSN: 194[0m
+[0;33mW (5473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5483) ZCL_CB: Comanda trimisă cu succes. TSN: 195[0m
+[0;33mW (5483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5493) ZCL_CB: Comanda trimisă cu succes. TSN: 196[0m
+[0;33mW (5503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5503) ZCL_CB: Comanda trimisă cu succes. TSN: 197[0m
+[0;33mW (5513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5513) ZCL_CB: Comanda trimisă cu succes. TSN: 198[0m
+[0;33mW (5523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5523) ZCL_CB: Comanda trimisă cu succes. TSN: 199[0m
+[0;33mW (5533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5533) ZCL_CB: Comanda trimisă cu succes. TSN: 200[0m
+[0;33mW (5543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5543) ZCL_CB: Comanda trimisă cu succes. TSN: 201[0m
+[0;33mW (5553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5563) ZCL_CB: Comanda trimisă cu succes. TSN: 202[0m
+[0;33mW (5563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5573) ZCL_CB: Comanda trimisă cu succes. TSN: 203[0m
+[0;33mW (5573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5583) ZCL_CB: Comanda trimisă cu succes. TSN: 204[0m
+[0;33mW (5593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5593) ZCL_CB: Comanda trimisă cu succes. TSN: 205[0m
+[0;33mW (5603) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5603) ZCL_CB: Comanda trimisă cu succes. TSN: 206[0m
+[0;33mW (5613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5613) ZCL_CB: Comanda trimisă cu succes. TSN: 207[0m
+[0;33mW (5623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5623) ZCL_CB: Comanda trimisă cu succes. TSN: 208[0m
+[0;33mW (5633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5633) ZCL_CB: Comanda trimisă cu succes. TSN: 209[0m
+[0;33mW (5643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5653) ZCL_CB: Comanda trimisă cu succes. TSN: 210[0m
+[0;33mW (5653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5663) ZCL_CB: Comanda trimisă cu succes. TSN: 211[0m
+[0;33mW (5663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5673) ZCL_CB: Comanda trimisă cu succes. TSN: 212[0m
+[0;33mW (5683) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5683) ZCL_CB: Comanda trimisă cu succes. TSN: 213[0m
+[0;33mW (5693) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5693) ZCL_CB: Comanda trimisă cu succes. TSN: 214[0m
+[0;33mW (5703) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5703) ZCL_CB: Comanda trimisă cu succes. TSN: 215[0m
+[0;33mW (5713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5713) ZCL_CB: Comanda trimisă cu succes. TSN: 216[0m
+[0;33mW (5723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5723) ZCL_CB: Comanda trimisă cu succes. TSN: 217[0m
+[0;33mW (5733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5743) ZCL_CB: Comanda trimisă cu succes. TSN: 218[0m
+[0;33mW (5743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5753) ZCL_CB: Comanda trimisă cu succes. TSN: 219[0m
+[0;33mW (5753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5763) ZCL_CB: Comanda trimisă cu succes. TSN: 220[0m
+[0;33mW (5773) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5773) ZCL_CB: Comanda trimisă cu succes. TSN: 221[0m
+[0;33mW (5783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5783) ZCL_CB: Comanda trimisă cu succes. TSN: 222[0m
+[0;33mW (5793) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5793) ZCL_CB: Comanda trimisă cu succes. TSN: 223[0m
+[0;33mW (5803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5803) ZCL_CB: Comanda trimisă cu succes. TSN: 224[0m
+[0;33mW (5813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5823) ZCL_CB: Comanda trimisă cu succes. TSN: 225[0m
+[0;33mW (5823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5833) ZCL_CB: Comanda trimisă cu succes. TSN: 226[0m
+[0;33mW (5833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5843) ZCL_CB: Comanda trimisă cu succes. TSN: 227[0m
+[0;33mW (5843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5853) ZCL_CB: Comanda trimisă cu succes. TSN: 228[0m
+[0;33mW (5863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5863) ZCL_CB: Comanda trimisă cu succes. TSN: 229[0m
+[0;33mW (5873) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5873) ZCL_CB: Comanda trimisă cu succes. TSN: 230[0m
+[0;33mW (5883) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5883) ZCL_CB: Comanda trimisă cu succes. TSN: 231[0m
+[0;33mW (5893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5893) ZCL_CB: Comanda trimisă cu succes. TSN: 232[0m
+[0;33mW (5903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5913) ZCL_CB: Comanda trimisă cu succes. TSN: 233[0m
+[0;33mW (5913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5923) ZCL_CB: Comanda trimisă cu succes. TSN: 234[0m
+[0;33mW (5923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5933) ZCL_CB: Comanda trimisă cu succes. TSN: 235[0m
+[0;33mW (5943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5943) ZCL_CB: Comanda trimisă cu succes. TSN: 236[0m
+[0;33mW (5953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5953) ZCL_CB: Comanda trimisă cu succes. TSN: 237[0m
+[0;33mW (5963) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5963) ZCL_CB: Comanda trimisă cu succes. TSN: 238[0m
+[0;33mW (5973) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5973) ZCL_CB: Comanda trimisă cu succes. TSN: 239[0m
+[0;33mW (5983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (5983) ZCL_CB: Comanda trimisă cu succes. TSN: 240[0m
+[0;33mW (5993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6003) ZCL_CB: Comanda trimisă cu succes. TSN: 241[0m
+[0;33mW (6003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6013) ZCL_CB: Comanda trimisă cu succes. TSN: 242[0m
+[0;33mW (6013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6023) ZCL_CB: Comanda trimisă cu succes. TSN: 243[0m
+[0;33mW (6033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6033) ZCL_CB: Comanda trimisă cu succes. TSN: 244[0m
+[0;33mW (6043) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6043) ZCL_CB: Comanda trimisă cu succes. TSN: 245[0m
+[0;33mW (6053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6053) ZCL_CB: Comanda trimisă cu succes. TSN: 246[0m
+[0;33mW (6063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6063) ZCL_CB: Comanda trimisă cu succes. TSN: 247[0m
+[0;33mW (6073) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6073) ZCL_CB: Comanda trimisă cu succes. TSN: 248[0m
+[0;33mW (6083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6093) ZCL_CB: Comanda trimisă cu succes. TSN: 249[0m
+[0;33mW (6093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6103) ZCL_CB: Comanda trimisă cu succes. TSN: 250[0m
+[0;33mW (6103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6113) ZCL_CB: Comanda trimisă cu succes. TSN: 251[0m
+[0;33mW (6123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6123) ZCL_CB: Comanda trimisă cu succes. TSN: 252[0m
+[0;33mW (6133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6133) ZCL_CB: Comanda trimisă cu succes. TSN: 253[0m
+[0;33mW (6143) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6143) ZCL_CB: Comanda trimisă cu succes. TSN: 254[0m
+[0;32mI (6153) ZigBee Coordinator: Sent message #1[0m
+[0;32mI (6153) ZCL_CB: Comanda trimisă cu succes. TSN: 255[0m
+[0;33mW (6163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6163) ZCL_CB: Comanda trimisă cu succes. TSN: 0[0m
+[0;33mW (6173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6183) ZCL_CB: Comanda trimisă cu succes. TSN: 1[0m
+[0;33mW (6183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6193) ZCL_CB: Comanda trimisă cu succes. TSN: 2[0m
+[0;33mW (6193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6203) ZCL_CB: Comanda trimisă cu succes. TSN: 3[0m
+[0;33mW (6203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6213) ZCL_CB: Comanda trimisă cu succes. TSN: 4[0m
+[0;33mW (6223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6223) ZCL_CB: Comanda trimisă cu succes. TSN: 5[0m
+[0;33mW (6233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6233) ZCL_CB: Comanda trimisă cu succes. TSN: 6[0m
+[0;33mW (6243) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6243) ZCL_CB: Comanda trimisă cu succes. TSN: 7[0m
+[0;33mW (6253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6253) ZCL_CB: Comanda trimisă cu succes. TSN: 8[0m
+[0;33mW (6263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6263) ZCL_CB: Comanda trimisă cu succes. TSN: 9[0m
+[0;33mW (6273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6283) ZCL_CB: Comanda trimisă cu succes. TSN: 10[0m
+[0;33mW (6283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6293) ZCL_CB: Comanda trimisă cu succes. TSN: 11[0m
+[0;33mW (6293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6303) ZCL_CB: Comanda trimisă cu succes. TSN: 12[0m
+[0;33mW (6303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6313) ZCL_CB: Comanda trimisă cu succes. TSN: 13[0m
+[0;33mW (6323) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6323) ZCL_CB: Comanda trimisă cu succes. TSN: 14[0m
+[0;33mW (6333) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6333) ZCL_CB: Comanda trimisă cu succes. TSN: 15[0m
+[0;33mW (6343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6343) ZCL_CB: Comanda trimisă cu succes. TSN: 16[0m
+[0;33mW (6353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6353) ZCL_CB: Comanda trimisă cu succes. TSN: 17[0m
+[0;33mW (6363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6363) ZCL_CB: Comanda trimisă cu succes. TSN: 18[0m
+[0;33mW (6373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6383) ZCL_CB: Comanda trimisă cu succes. TSN: 19[0m
+[0;33mW (6383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6393) ZCL_CB: Comanda trimisă cu succes. TSN: 20[0m
+[0;33mW (6393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6403) ZCL_CB: Comanda trimisă cu succes. TSN: 21[0m
+[0;33mW (6413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6413) ZCL_CB: Comanda trimisă cu succes. TSN: 22[0m
+[0;33mW (6423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6423) ZCL_CB: Comanda trimisă cu succes. TSN: 23[0m
+[0;33mW (6433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6433) ZCL_CB: Comanda trimisă cu succes. TSN: 24[0m
+[0;33mW (6443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6443) ZCL_CB: Comanda trimisă cu succes. TSN: 25[0m
+[0;33mW (6453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6453) ZCL_CB: Comanda trimisă cu succes. TSN: 26[0m
+[0;33mW (6463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6473) ZCL_CB: Comanda trimisă cu succes. TSN: 27[0m
+[0;33mW (6473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6483) ZCL_CB: Comanda trimisă cu succes. TSN: 28[0m
+[0;33mW (6483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6493) ZCL_CB: Comanda trimisă cu succes. TSN: 29[0m
+[0;33mW (6503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6503) ZCL_CB: Comanda trimisă cu succes. TSN: 30[0m
+[0;33mW (6513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6513) ZCL_CB: Comanda trimisă cu succes. TSN: 31[0m
+[0;33mW (6523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6523) ZCL_CB: Comanda trimisă cu succes. TSN: 32[0m
+[0;33mW (6533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6533) ZCL_CB: Comanda trimisă cu succes. TSN: 33[0m
+[0;33mW (6543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6543) ZCL_CB: Comanda trimisă cu succes. TSN: 34[0m
+[0;33mW (6553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6563) ZCL_CB: Comanda trimisă cu succes. TSN: 35[0m
+[0;33mW (6563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6573) ZCL_CB: Comanda trimisă cu succes. TSN: 36[0m
+[0;33mW (6573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6583) ZCL_CB: Comanda trimisă cu succes. TSN: 37[0m
+[0;33mW (6583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6593) ZCL_CB: Comanda trimisă cu succes. TSN: 38[0m
+[0;33mW (6603) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6603) ZCL_CB: Comanda trimisă cu succes. TSN: 39[0m
+[0;33mW (6613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6613) ZCL_CB: Comanda trimisă cu succes. TSN: 40[0m
+[0;33mW (6623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6623) ZCL_CB: Comanda trimisă cu succes. TSN: 41[0m
+[0;33mW (6633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6633) ZCL_CB: Comanda trimisă cu succes. TSN: 42[0m
+[0;33mW (6643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6643) ZCL_CB: Comanda trimisă cu succes. TSN: 43[0m
+[0;33mW (6653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6663) ZCL_CB: Comanda trimisă cu succes. TSN: 44[0m
+[0;33mW (6663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6673) ZCL_CB: Comanda trimisă cu succes. TSN: 45[0m
+[0;33mW (6673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6683) ZCL_CB: Comanda trimisă cu succes. TSN: 46[0m
+[0;33mW (6693) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6693) ZCL_CB: Comanda trimisă cu succes. TSN: 47[0m
+[0;33mW (6703) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6703) ZCL_CB: Comanda trimisă cu succes. TSN: 48[0m
+[0;33mW (6713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6713) ZCL_CB: Comanda trimisă cu succes. TSN: 49[0m
+[0;33mW (6723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6723) ZCL_CB: Comanda trimisă cu succes. TSN: 50[0m
+[0;33mW (6733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6733) ZCL_CB: Comanda trimisă cu succes. TSN: 51[0m
+[0;33mW (6743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6753) ZCL_CB: Comanda trimisă cu succes. TSN: 52[0m
+[0;33mW (6753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6763) ZCL_CB: Comanda trimisă cu succes. TSN: 53[0m
+[0;33mW (6763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6773) ZCL_CB: Comanda trimisă cu succes. TSN: 54[0m
+[0;33mW (6783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6783) ZCL_CB: Comanda trimisă cu succes. TSN: 55[0m
+[0;33mW (6793) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6793) ZCL_CB: Comanda trimisă cu succes. TSN: 56[0m
+[0;33mW (6803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6803) ZCL_CB: Comanda trimisă cu succes. TSN: 57[0m
+[0;33mW (6813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6813) ZCL_CB: Comanda trimisă cu succes. TSN: 58[0m
+[0;33mW (6823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6823) ZCL_CB: Comanda trimisă cu succes. TSN: 59[0m
+[0;33mW (6833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6843) ZCL_CB: Comanda trimisă cu succes. TSN: 60[0m
+[0;33mW (6843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6853) ZCL_CB: Comanda trimisă cu succes. TSN: 61[0m
+[0;33mW (6853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6863) ZCL_CB: Comanda trimisă cu succes. TSN: 62[0m
+[0;33mW (6863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6873) ZCL_CB: Comanda trimisă cu succes. TSN: 63[0m
+[0;33mW (6883) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6883) ZCL_CB: Comanda trimisă cu succes. TSN: 64[0m
+[0;33mW (6893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6893) ZCL_CB: Comanda trimisă cu succes. TSN: 65[0m
+[0;33mW (6903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6903) ZCL_CB: Comanda trimisă cu succes. TSN: 66[0m
+[0;33mW (6913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6913) ZCL_CB: Comanda trimisă cu succes. TSN: 67[0m
+[0;33mW (6923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6923) ZCL_CB: Comanda trimisă cu succes. TSN: 68[0m
+[0;33mW (6933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6943) ZCL_CB: Comanda trimisă cu succes. TSN: 69[0m
+[0;33mW (6943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6953) ZCL_CB: Comanda trimisă cu succes. TSN: 70[0m
+[0;33mW (6953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6963) ZCL_CB: Comanda trimisă cu succes. TSN: 71[0m
+[0;33mW (6973) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6973) ZCL_CB: Comanda trimisă cu succes. TSN: 72[0m
+[0;33mW (6983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6983) ZCL_CB: Comanda trimisă cu succes. TSN: 73[0m
+[0;33mW (6993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (6993) ZCL_CB: Comanda trimisă cu succes. TSN: 74[0m
+[0;33mW (7003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7003) ZCL_CB: Comanda trimisă cu succes. TSN: 75[0m
+[0;33mW (7013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7013) ZCL_CB: Comanda trimisă cu succes. TSN: 76[0m
+[0;33mW (7023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7033) ZCL_CB: Comanda trimisă cu succes. TSN: 77[0m
+[0;33mW (7033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7043) ZCL_CB: Comanda trimisă cu succes. TSN: 78[0m
+[0;33mW (7043) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7053) ZCL_CB: Comanda trimisă cu succes. TSN: 79[0m
+[0;33mW (7063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7063) ZCL_CB: Comanda trimisă cu succes. TSN: 80[0m
+[0;33mW (7073) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7073) ZCL_CB: Comanda trimisă cu succes. TSN: 81[0m
+[0;33mW (7083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7083) ZCL_CB: Comanda trimisă cu succes. TSN: 82[0m
+[0;33mW (7093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7093) ZCL_CB: Comanda trimisă cu succes. TSN: 83[0m
+[0;33mW (7103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7103) ZCL_CB: Comanda trimisă cu succes. TSN: 84[0m
+[0;33mW (7113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7123) ZCL_CB: Comanda trimisă cu succes. TSN: 85[0m
+[0;33mW (7123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7133) ZCL_CB: Comanda trimisă cu succes. TSN: 86[0m
+[0;33mW (7133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7143) ZCL_CB: Comanda trimisă cu succes. TSN: 87[0m
+[0;33mW (7143) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7153) ZCL_CB: Comanda trimisă cu succes. TSN: 88[0m
+[0;33mW (7163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7163) ZCL_CB: Comanda trimisă cu succes. TSN: 89[0m
+[0;33mW (7173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7173) ZCL_CB: Comanda trimisă cu succes. TSN: 90[0m
+[0;33mW (7183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7183) ZCL_CB: Comanda trimisă cu succes. TSN: 91[0m
+[0;33mW (7193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7193) ZCL_CB: Comanda trimisă cu succes. TSN: 92[0m
+[0;33mW (7203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7203) ZCL_CB: Comanda trimisă cu succes. TSN: 93[0m
+[0;33mW (7213) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7223) ZCL_CB: Comanda trimisă cu succes. TSN: 94[0m
+[0;33mW (7223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7233) ZCL_CB: Comanda trimisă cu succes. TSN: 95[0m
+[0;33mW (7233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7243) ZCL_CB: Comanda trimisă cu succes. TSN: 96[0m
+[0;33mW (7253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7253) ZCL_CB: Comanda trimisă cu succes. TSN: 97[0m
+[0;33mW (7263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7263) ZCL_CB: Comanda trimisă cu succes. TSN: 98[0m
+[0;33mW (7273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7273) ZCL_CB: Comanda trimisă cu succes. TSN: 99[0m
+[0;33mW (7283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7283) ZCL_CB: Comanda trimisă cu succes. TSN: 100[0m
+[0;33mW (7293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7293) ZCL_CB: Comanda trimisă cu succes. TSN: 101[0m
+[0;33mW (7303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7313) ZCL_CB: Comanda trimisă cu succes. TSN: 102[0m
+[0;33mW (7313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7323) ZCL_CB: Comanda trimisă cu succes. TSN: 103[0m
+[0;33mW (7323) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7333) ZCL_CB: Comanda trimisă cu succes. TSN: 104[0m
+[0;33mW (7343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7343) ZCL_CB: Comanda trimisă cu succes. TSN: 105[0m
+[0;33mW (7353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7353) ZCL_CB: Comanda trimisă cu succes. TSN: 106[0m
+[0;33mW (7363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7363) ZCL_CB: Comanda trimisă cu succes. TSN: 107[0m
+[0;33mW (7373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7373) ZCL_CB: Comanda trimisă cu succes. TSN: 108[0m
+[0;33mW (7383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7383) ZCL_CB: Comanda trimisă cu succes. TSN: 109[0m
+[0;33mW (7393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7403) ZCL_CB: Comanda trimisă cu succes. TSN: 110[0m
+[0;33mW (7403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7413) ZCL_CB: Comanda trimisă cu succes. TSN: 111[0m
+[0;33mW (7413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7423) ZCL_CB: Comanda trimisă cu succes. TSN: 112[0m
+[0;33mW (7433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7433) ZCL_CB: Comanda trimisă cu succes. TSN: 113[0m
+[0;33mW (7443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7443) ZCL_CB: Comanda trimisă cu succes. TSN: 114[0m
+[0;33mW (7453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7453) ZCL_CB: Comanda trimisă cu succes. TSN: 115[0m
+[0;33mW (7463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7463) ZCL_CB: Comanda trimisă cu succes. TSN: 116[0m
+[0;33mW (7473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7473) ZCL_CB: Comanda trimisă cu succes. TSN: 117[0m
+[0;33mW (7483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7493) ZCL_CB: Comanda trimisă cu succes. TSN: 118[0m
+[0;33mW (7493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7503) ZCL_CB: Comanda trimisă cu succes. TSN: 119[0m
+[0;33mW (7503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7513) ZCL_CB: Comanda trimisă cu succes. TSN: 120[0m
+[0;33mW (7523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7523) ZCL_CB: Comanda trimisă cu succes. TSN: 121[0m
+[0;33mW (7533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7533) ZCL_CB: Comanda trimisă cu succes. TSN: 122[0m
+[0;33mW (7543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7543) ZCL_CB: Comanda trimisă cu succes. TSN: 123[0m
+[0;33mW (7553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7553) ZCL_CB: Comanda trimisă cu succes. TSN: 124[0m
+[0;33mW (7563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7573) ZCL_CB: Comanda trimisă cu succes. TSN: 125[0m
+[0;33mW (7573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7583) ZCL_CB: Comanda trimisă cu succes. TSN: 126[0m
+[0;33mW (7583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7593) ZCL_CB: Comanda trimisă cu succes. TSN: 127[0m
+[0;33mW (7593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7603) ZCL_CB: Comanda trimisă cu succes. TSN: 128[0m
+[0;33mW (7613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7613) ZCL_CB: Comanda trimisă cu succes. TSN: 129[0m
+[0;33mW (7623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7623) ZCL_CB: Comanda trimisă cu succes. TSN: 130[0m
+[0;33mW (7633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7633) ZCL_CB: Comanda trimisă cu succes. TSN: 131[0m
+[0;33mW (7643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7643) ZCL_CB: Comanda trimisă cu succes. TSN: 132[0m
+[0;33mW (7653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7663) ZCL_CB: Comanda trimisă cu succes. TSN: 133[0m
+[0;33mW (7663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7673) ZCL_CB: Comanda trimisă cu succes. TSN: 134[0m
+[0;33mW (7673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7683) ZCL_CB: Comanda trimisă cu succes. TSN: 135[0m
+[0;33mW (7693) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7693) ZCL_CB: Comanda trimisă cu succes. TSN: 136[0m
+[0;33mW (7703) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7703) ZCL_CB: Comanda trimisă cu succes. TSN: 137[0m
+[0;33mW (7713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7713) ZCL_CB: Comanda trimisă cu succes. TSN: 138[0m
+[0;33mW (7723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7723) ZCL_CB: Comanda trimisă cu succes. TSN: 139[0m
+[0;33mW (7733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7733) ZCL_CB: Comanda trimisă cu succes. TSN: 140[0m
+[0;33mW (7743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7753) ZCL_CB: Comanda trimisă cu succes. TSN: 141[0m
+[0;33mW (7753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7763) ZCL_CB: Comanda trimisă cu succes. TSN: 142[0m
+[0;33mW (7763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7773) ZCL_CB: Comanda trimisă cu succes. TSN: 143[0m
+[0;33mW (7783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7783) ZCL_CB: Comanda trimisă cu succes. TSN: 144[0m
+[0;33mW (7793) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7793) ZCL_CB: Comanda trimisă cu succes. TSN: 145[0m
+[0;33mW (7803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7803) ZCL_CB: Comanda trimisă cu succes. TSN: 146[0m
+[0;33mW (7813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7813) ZCL_CB: Comanda trimisă cu succes. TSN: 147[0m
+[0;33mW (7823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7823) ZCL_CB: Comanda trimisă cu succes. TSN: 148[0m
+[0;33mW (7833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7843) ZCL_CB: Comanda trimisă cu succes. TSN: 149[0m
+[0;33mW (7843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7853) ZCL_CB: Comanda trimisă cu succes. TSN: 150[0m
+[0;33mW (7853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7863) ZCL_CB: Comanda trimisă cu succes. TSN: 151[0m
+[0;33mW (7873) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7873) ZCL_CB: Comanda trimisă cu succes. TSN: 152[0m
+[0;33mW (7883) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7883) ZCL_CB: Comanda trimisă cu succes. TSN: 153[0m
+[0;33mW (7893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7893) ZCL_CB: Comanda trimisă cu succes. TSN: 154[0m
+[0;33mW (7903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7903) ZCL_CB: Comanda trimisă cu succes. TSN: 155[0m
+[0;33mW (7913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7913) ZCL_CB: Comanda trimisă cu succes. TSN: 156[0m
+[0;33mW (7923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7933) ZCL_CB: Comanda trimisă cu succes. TSN: 157[0m
+[0;33mW (7933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7943) ZCL_CB: Comanda trimisă cu succes. TSN: 158[0m
+[0;33mW (7943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7953) ZCL_CB: Comanda trimisă cu succes. TSN: 159[0m
+[0;33mW (7963) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7963) ZCL_CB: Comanda trimisă cu succes. TSN: 160[0m
+[0;33mW (7973) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7973) ZCL_CB: Comanda trimisă cu succes. TSN: 161[0m
+[0;33mW (7983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7983) ZCL_CB: Comanda trimisă cu succes. TSN: 162[0m
+[0;33mW (7993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (7993) ZCL_CB: Comanda trimisă cu succes. TSN: 163[0m
+[0;33mW (8003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8013) ZCL_CB: Comanda trimisă cu succes. TSN: 164[0m
+[0;33mW (8013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8023) ZCL_CB: Comanda trimisă cu succes. TSN: 165[0m
+[0;33mW (8023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8033) ZCL_CB: Comanda trimisă cu succes. TSN: 166[0m
+[0;33mW (8033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8043) ZCL_CB: Comanda trimisă cu succes. TSN: 167[0m
+[0;33mW (8053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8053) ZCL_CB: Comanda trimisă cu succes. TSN: 168[0m
+[0;33mW (8063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8063) ZCL_CB: Comanda trimisă cu succes. TSN: 169[0m
+[0;33mW (8073) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8073) ZCL_CB: Comanda trimisă cu succes. TSN: 170[0m
+[0;33mW (8083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8083) ZCL_CB: Comanda trimisă cu succes. TSN: 171[0m
+[0;33mW (8093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8103) ZCL_CB: Comanda trimisă cu succes. TSN: 172[0m
+[0;33mW (8103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8113) ZCL_CB: Comanda trimisă cu succes. TSN: 173[0m
+[0;33mW (8113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8123) ZCL_CB: Comanda trimisă cu succes. TSN: 174[0m
+[0;33mW (8133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8133) ZCL_CB: Comanda trimisă cu succes. TSN: 175[0m
+[0;33mW (8143) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8143) ZCL_CB: Comanda trimisă cu succes. TSN: 176[0m
+[0;33mW (8153) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8153) ZCL_CB: Comanda trimisă cu succes. TSN: 177[0m
+[0;33mW (8163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8163) ZCL_CB: Comanda trimisă cu succes. TSN: 178[0m
+[0;33mW (8173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8173) ZCL_CB: Comanda trimisă cu succes. TSN: 179[0m
+[0;33mW (8183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8193) ZCL_CB: Comanda trimisă cu succes. TSN: 180[0m
+[0;33mW (8193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8203) ZCL_CB: Comanda trimisă cu succes. TSN: 181[0m
+[0;33mW (8203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8213) ZCL_CB: Comanda trimisă cu succes. TSN: 182[0m
+[0;33mW (8223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8223) ZCL_CB: Comanda trimisă cu succes. TSN: 183[0m
+[0;33mW (8233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8233) ZCL_CB: Comanda trimisă cu succes. TSN: 184[0m
+[0;33mW (8243) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8243) ZCL_CB: Comanda trimisă cu succes. TSN: 185[0m
+[0;33mW (8253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8253) ZCL_CB: Comanda trimisă cu succes. TSN: 186[0m
+[0;33mW (8263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8263) ZCL_CB: Comanda trimisă cu succes. TSN: 187[0m
+[0;31mE (8273) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (8273) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (8273) task_wdt: Tasks currently running:[0m
+[0;31mE (8273) task_wdt: CPU 0: Zigbee_main[0m
+[0;31mE (8273) task_wdt: Print CPU 0 (current core) backtrace[0m
+Print CPU 0 (current core) registers
+Core  0 register dump:
+[0;33mW (8273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8383) ZCL_CB: Comanda trimisă cu succes. TSN: 188[0m
+[0;33mW (8393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8393) ZCL_CB: Comanda trimisă cu succes. TSN: 189[0m
+[0;33mW (8403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8413) ZCL_CB: Comanda trimisă cu succes. TSN: 190[0m
+[0;33mW (8413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8423) ZCL_CB: Comanda trimisă cu succes. TSN: 191[0m
+[0;33mW (8423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8433) ZCL_CB: Comanda trimisă cu succes. TSN: 192[0m
+[0;33mW (8443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8443) ZCL_CB: Comanda trimisă cu succes. TSN: 193[0m
+[0;33mW (8453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8453) ZCL_CB: Comanda trimisă cu succes. TSN: 194[0m
+[0;33mW (8463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8463) ZCL_CB: Comanda trimisă cu succes. TSN: 195[0m
+[0;33mW (8473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8473) ZCL_CB: Comanda trimisă cu succes. TSN: 196[0m
+[0;33mW (8483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8493) ZCL_CB: Comanda trimisă cu succes. TSN: 197[0m
+[0;33mW (8493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8503) ZCL_CB: Comanda trimisă cu succes. TSN: 198[0m
+[0;33mW (8503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8513) ZCL_CB: Comanda trimisă cu succes. TSN: 199[0m
+[0;33mW (8513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8523) ZCL_CB: Comanda trimisă cu succes. TSN: 200[0m
+[0;33mW (8533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8533) ZCL_CB: Comanda trimisă cu succes. TSN: 201[0m
+[0;33mW (8543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8543) ZCL_CB: Comanda trimisă cu succes. TSN: 202[0m
+[0;33mW (8553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8553) ZCL_CB: Comanda trimisă cu succes. TSN: 203[0m
+[0;33mW (8563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8563) ZCL_CB: Comanda trimisă cu succes. TSN: 204[0m
+[0;33mW (8573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8583) ZCL_CB: Comanda trimisă cu succes. TSN: 205[0m
+[0;33mW (8583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8593) ZCL_CB: Comanda trimisă cu succes. TSN: 206[0m
+[0;33mW (8593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8603) ZCL_CB: Comanda trimisă cu succes. TSN: 207[0m
+[0;33mW (8613) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8613) ZCL_CB: Comanda trimisă cu succes. TSN: 208[0m
+[0;33mW (8623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8623) ZCL_CB: Comanda trimisă cu succes. TSN: 209[0m
+[0;33mW (8633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8633) ZCL_CB: Comanda trimisă cu succes. TSN: 210[0m
+[0;33mW (8643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8643) ZCL_CB: Comanda trimisă cu succes. TSN: 211[0m
+[0;33mW (8653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8653) ZCL_CB: Comanda trimisă cu succes. TSN: 212[0m
+[0;33mW (8663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8673) ZCL_CB: Comanda trimisă cu succes. TSN: 213[0m
+[0;33mW (8673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8683) ZCL_CB: Comanda trimisă cu succes. TSN: 214[0m
+[0;33mW (8683) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8693) ZCL_CB: Comanda trimisă cu succes. TSN: 215[0m
+[0;33mW (8703) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8703) ZCL_CB: Comanda trimisă cu succes. TSN: 216[0m
+[0;33mW (8713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8713) ZCL_CB: Comanda trimisă cu succes. TSN: 217[0m
+[0;33mW (8723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8723) ZCL_CB: Comanda trimisă cu succes. TSN: 218[0m
+[0;33mW (8733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8733) ZCL_CB: Comanda trimisă cu succes. TSN: 219[0m
+[0;33mW (8743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8743) ZCL_CB: Comanda trimisă cu succes. TSN: 220[0m
+[0;33mW (8753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8763) ZCL_CB: Comanda trimisă cu succes. TSN: 221[0m
+[0;33mW (8763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8773) ZCL_CB: Comanda trimisă cu succes. TSN: 222[0m
+[0;33mW (8773) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8783) ZCL_CB: Comanda trimisă cu succes. TSN: 223[0m
+[0;33mW (8793) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8793) ZCL_CB: Comanda trimisă cu succes. TSN: 224[0m
+[0;33mW (8803) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8803) ZCL_CB: Comanda trimisă cu succes. TSN: 225[0m
+[0;33mW (8813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8813) ZCL_CB: Comanda trimisă cu succes. TSN: 226[0m
+[0;33mW (8823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8823) ZCL_CB: Comanda trimisă cu succes. TSN: 227[0m
+[0;33mW (8833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8833) ZCL_CB: Comanda trimisă cu succes. TSN: 228[0m
+[0;33mW (8843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8853) ZCL_CB: Comanda trimisă cu succes. TSN: 229[0m
+[0;33mW (8853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8863) ZCL_CB: Comanda trimisă cu succes. TSN: 230[0m
+[0;33mW (8863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8873) ZCL_CB: Comanda trimisă cu succes. TSN: 231[0m
+[0;33mW (8883) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8883) ZCL_CB: Comanda trimisă cu succes. TSN: 232[0m
+[0;33mW (8893) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8893) ZCL_CB: Comanda trimisă cu succes. TSN: 233[0m
+[0;33mW (8903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8903) ZCL_CB: Comanda trimisă cu succes. TSN: 234[0m
+[0;33mW (8913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8913) ZCL_CB: Comanda trimisă cu succes. TSN: 235[0m
+[0;33mW (8923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8933) ZCL_CB: Comanda trimisă cu succes. TSN: 236[0m
+[0;33mW (8933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8943) ZCL_CB: Comanda trimisă cu succes. TSN: 237[0m
+[0;33mW (8943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8953) ZCL_CB: Comanda trimisă cu succes. TSN: 238[0m
+[0;33mW (8953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8963) ZCL_CB: Comanda trimisă cu succes. TSN: 239[0m
+[0;33mW (8973) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8973) ZCL_CB: Comanda trimisă cu succes. TSN: 240[0m
+[0;33mW (8983) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8983) ZCL_CB: Comanda trimisă cu succes. TSN: 241[0m
+[0;33mW (8993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (8993) ZCL_CB: Comanda trimisă cu succes. TSN: 242[0m
+[0;33mW (9003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9003) ZCL_CB: Comanda trimisă cu succes. TSN: 243[0m
+[0;33mW (9013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9023) ZCL_CB: Comanda trimisă cu succes. TSN: 244[0m
+[0;33mW (9023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9033) ZCL_CB: Comanda trimisă cu succes. TSN: 245[0m
+[0;33mW (9033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9043) ZCL_CB: Comanda trimisă cu succes. TSN: 246[0m
+[0;33mW (9053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9053) ZCL_CB: Comanda trimisă cu succes. TSN: 247[0m
+[0;33mW (9063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9063) ZCL_CB: Comanda trimisă cu succes. TSN: 248[0m
+[0;33mW (9073) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9073) ZCL_CB: Comanda trimisă cu succes. TSN: 249[0m
+[0;33mW (9083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9083) ZCL_CB: Comanda trimisă cu succes. TSN: 250[0m
+[0;33mW (9093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9093) ZCL_CB: Comanda trimisă cu succes. TSN: 251[0m
+[0;33mW (9103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9113) ZCL_CB: Comanda trimisă cu succes. TSN: 252[0m
+[0;33mW (9113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9123) ZCL_CB: Comanda trimisă cu succes. TSN: 253[0m
+[0;33mW (9123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9133) ZCL_CB: Comanda trimisă cu succes. TSN: 254[0m
+[0;32mI (9143) ZigBee Coordinator: Sent message #2[0m
+[0;32mI (9143) ZCL_CB: Comanda trimisă cu succes. TSN: 255[0m
+[0;33mW (9153) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9153) ZCL_CB: Comanda trimisă cu succes. TSN: 0[0m
+[0;33mW (9163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9163) ZCL_CB: Comanda trimisă cu succes. TSN: 1[0m
+[0;33mW (9173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9173) ZCL_CB: Comanda trimisă cu succes. TSN: 2[0m
+[0;33mW (9183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9183) ZCL_CB: Comanda trimisă cu succes. TSN: 3[0m
+[0;33mW (9193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9193) ZCL_CB: Comanda trimisă cu succes. TSN: 4[0m
+[0;33mW (9203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9213) ZCL_CB: Comanda trimisă cu succes. TSN: 5[0m
+[0;33mW (9213) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9223) ZCL_CB: Comanda trimisă cu succes. TSN: 6[0m
+[0;33mW (9223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9233) ZCL_CB: Comanda trimisă cu succes. TSN: 7[0m
+[0;33mW (9233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9243) ZCL_CB: Comanda trimisă cu succes. TSN: 8[0m
+[0;33mW (9253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9253) ZCL_CB: Comanda trimisă cu succes. TSN: 9[0m
+[0;33mW (9263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9263) ZCL_CB: Comanda trimisă cu succes. TSN: 10[0m
+[0;33mW (9273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9273) ZCL_CB: Comanda trimisă cu succes. TSN: 11[0m
+[0;33mW (9283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9283) ZCL_CB: Comanda trimisă cu succes. TSN: 12[0m
+[0;33mW (9293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9293) ZCL_CB: Comanda trimisă cu succes. TSN: 13[0m
+[0;33mW (9303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9313) ZCL_CB: Comanda trimisă cu succes. TSN: 14[0m
+[0;33mW (9313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9323) ZCL_CB: Comanda trimisă cu succes. TSN: 15[0m
+[0;33mW (9323) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9333) ZCL_CB: Comanda trimisă cu succes. TSN: 16[0m
+[0;33mW (9343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9343) ZCL_CB: Comanda trimisă cu succes. TSN: 17[0m
+[0;33mW (9353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9353) ZCL_CB: Comanda trimisă cu succes. TSN: 18[0m
+[0;33mW (9363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9363) ZCL_CB: Comanda trimisă cu succes. TSN: 19[0m
+[0;33mW (9373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9373) ZCL_CB: Comanda trimisă cu succes. TSN: 20[0m
+[0;33mW (9383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9383) ZCL_CB: Comanda trimisă cu succes. TSN: 21[0m
+[0;33mW (9393) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9403) ZCL_CB: Comanda trimisă cu succes. TSN: 22[0m
+[0;33mW (9403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9413) ZCL_CB: Comanda trimisă cu succes. TSN: 23[0m
+[0;33mW (9413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9423) ZCL_CB: Comanda trimisă cu succes. TSN: 24[0m
+[0;33mW (9433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9433) ZCL_CB: Comanda trimisă cu succes. TSN: 25[0m
+[0;33mW (9443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9443) ZCL_CB: Comanda trimisă cu succes. TSN: 26[0m
+[0;33mW (9453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9453) ZCL_CB: Comanda trimisă cu succes. TSN: 27[0m
+[0;33mW (9463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9463) ZCL_CB: Comanda trimisă cu succes. TSN: 28[0m
+[0;33mW (9473) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9473) ZCL_CB: Comanda trimisă cu succes. TSN: 29[0m
+[0;33mW (9483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9493) ZCL_CB: Comanda trimisă cu succes. TSN: 30[0m
+[0;33mW (9493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9503) ZCL_CB: Comanda trimisă cu succes. TSN: 31[0m
+[0;33mW (9503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9513) ZCL_CB: Comanda trimisă cu succes. TSN: 32[0m
+[0;33mW (9513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9523) ZCL_CB: Comanda trimisă cu succes. TSN: 33[0m
+[0;33mW (9533) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9533) ZCL_CB: Comanda trimisă cu succes. TSN: 34[0m
+[0;33mW (9543) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9543) ZCL_CB: Comanda trimisă cu succes. TSN: 35[0m
+[0;33mW (9553) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9553) ZCL_CB: Comanda trimisă cu succes. TSN: 36[0m
+[0;33mW (9563) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9563) ZCL_CB: Comanda trimisă cu succes. TSN: 37[0m
+[0;33mW (9573) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9573) ZCL_CB: Comanda trimisă cu succes. TSN: 38[0m
+[0;33mW (9583) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9593) ZCL_CB: Comanda trimisă cu succes. TSN: 39[0m
+[0;33mW (9593) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9603) ZCL_CB: Comanda trimisă cu succes. TSN: 40[0m
+[0;33mW (9603) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9613) ZCL_CB: Comanda trimisă cu succes. TSN: 41[0m
+[0;33mW (9623) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9623) ZCL_CB: Comanda trimisă cu succes. TSN: 42[0m
+[0;33mW (9633) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9633) ZCL_CB: Comanda trimisă cu succes. TSN: 43[0m
+[0;33mW (9643) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9643) ZCL_CB: Comanda trimisă cu succes. TSN: 44[0m
+[0;33mW (9653) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9653) ZCL_CB: Comanda trimisă cu succes. TSN: 45[0m
+[0;33mW (9663) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9663) ZCL_CB: Comanda trimisă cu succes. TSN: 46[0m
+[0;33mW (9673) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9683) ZCL_CB: Comanda trimisă cu succes. TSN: 47[0m
+[0;33mW (9683) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9693) ZCL_CB: Comanda trimisă cu succes. TSN: 48[0m
+[0;33mW (9693) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9703) ZCL_CB: Comanda trimisă cu succes. TSN: 49[0m
+[0;33mW (9713) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9713) ZCL_CB: Comanda trimisă cu succes. TSN: 50[0m
+[0;33mW (9723) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9723) ZCL_CB: Comanda trimisă cu succes. TSN: 51[0m
+[0;33mW (9733) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9733) ZCL_CB: Comanda trimisă cu succes. TSN: 52[0m
+[0;33mW (9743) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9743) ZCL_CB: Comanda trimisă cu succes. TSN: 53[0m
+[0;33mW (9753) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9753) ZCL_CB: Comanda trimisă cu succes. TSN: 54[0m
+[0;33mW (9763) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9773) ZCL_CB: Comanda trimisă cu succes. TSN: 55[0m
+[0;33mW (9773) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9783) ZCL_CB: Comanda trimisă cu succes. TSN: 56[0m
+[0;33mW (9783) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9793) ZCL_CB: Comanda trimisă cu succes. TSN: 57[0m
+[0;33mW (9793) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9803) ZCL_CB: Comanda trimisă cu succes. TSN: 58[0m
+[0;33mW (9813) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9813) ZCL_CB: Comanda trimisă cu succes. TSN: 59[0m
+[0;33mW (9823) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9823) ZCL_CB: Comanda trimisă cu succes. TSN: 60[0m
+[0;33mW (9833) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9833) ZCL_CB: Comanda trimisă cu succes. TSN: 61[0m
+[0;33mW (9843) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9843) ZCL_CB: Comanda trimisă cu succes. TSN: 62[0m
+[0;33mW (9853) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9853) ZCL_CB: Comanda trimisă cu succes. TSN: 63[0m
+[0;33mW (9863) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9873) ZCL_CB: Comanda trimisă cu succes. TSN: 64[0m
+[0;33mW (9873) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9883) ZCL_CB: Comanda trimisă cu succes. TSN: 65[0m
+[0;33mW (9883) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9893) ZCL_CB: Comanda trimisă cu succes. TSN: 66[0m
+[0;33mW (9903) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9903) ZCL_CB: Comanda trimisă cu succes. TSN: 67[0m
+[0;33mW (9913) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9913) ZCL_CB: Comanda trimisă cu succes. TSN: 68[0m
+[0;33mW (9923) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9923) ZCL_CB: Comanda trimisă cu succes. TSN: 69[0m
+[0;33mW (9933) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9933) ZCL_CB: Comanda trimisă cu succes. TSN: 70[0m
+[0;33mW (9943) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9943) ZCL_CB: Comanda trimisă cu succes. TSN: 71[0m
+[0;33mW (9953) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9963) ZCL_CB: Comanda trimisă cu succes. TSN: 72[0m
+[0;33mW (9963) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9973) ZCL_CB: Comanda trimisă cu succes. TSN: 73[0m
+[0;33mW (9973) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9983) ZCL_CB: Comanda trimisă cu succes. TSN: 74[0m
+[0;33mW (9993) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (9993) ZCL_CB: Comanda trimisă cu succes. TSN: 75[0m
+[0;33mW (10003) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10003) ZCL_CB: Comanda trimisă cu succes. TSN: 76[0m
+[0;33mW (10013) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10013) ZCL_CB: Comanda trimisă cu succes. TSN: 77[0m
+[0;33mW (10023) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10023) ZCL_CB: Comanda trimisă cu succes. TSN: 78[0m
+[0;33mW (10033) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10033) ZCL_CB: Comanda trimisă cu succes. TSN: 79[0m
+[0;33mW (10043) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10053) ZCL_CB: Comanda trimisă cu succes. TSN: 80[0m
+[0;33mW (10053) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10063) ZCL_CB: Comanda trimisă cu succes. TSN: 81[0m
+[0;33mW (10063) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10073) ZCL_CB: Comanda trimisă cu succes. TSN: 82[0m
+[0;33mW (10083) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10083) ZCL_CB: Comanda trimisă cu succes. TSN: 83[0m
+[0;33mW (10093) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10093) ZCL_CB: Comanda trimisă cu succes. TSN: 84[0m
+[0;33mW (10103) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10103) ZCL_CB: Comanda trimisă cu succes. TSN: 85[0m
+[0;33mW (10113) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10113) ZCL_CB: Comanda trimisă cu succes. TSN: 86[0m
+[0;33mW (10123) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10133) ZCL_CB: Comanda trimisă cu succes. TSN: 87[0m
+[0;33mW (10133) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10143) ZCL_CB: Comanda trimisă cu succes. TSN: 88[0m
+[0;33mW (10143) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10153) ZCL_CB: Comanda trimisă cu succes. TSN: 89[0m
+[0;33mW (10163) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10163) ZCL_CB: Comanda trimisă cu succes. TSN: 90[0m
+[0;33mW (10173) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10173) ZCL_CB: Comanda trimisă cu succes. TSN: 91[0m
+[0;33mW (10183) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10183) ZCL_CB: Comanda trimisă cu succes. TSN: 92[0m
+[0;33mW (10193) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10193) ZCL_CB: Comanda trimisă cu succes. TSN: 93[0m
+[0;33mW (10203) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10213) ZCL_CB: Comanda trimisă cu succes. TSN: 94[0m
+[0;33mW (10213) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10223) ZCL_CB: Comanda trimisă cu succes. TSN: 95[0m
+[0;33mW (10223) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10233) ZCL_CB: Comanda trimisă cu succes. TSN: 96[0m
+[0;33mW (10233) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10243) ZCL_CB: Comanda trimisă cu succes. TSN: 97[0m
+[0;33mW (10253) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10253) ZCL_CB: Comanda trimisă cu succes. TSN: 98[0m
+[0;33mW (10263) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10263) ZCL_CB: Comanda trimisă cu succes. TSN: 99[0m
+[0;33mW (10273) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10273) ZCL_CB: Comanda trimisă cu succes. TSN: 100[0m
+[0;33mW (10283) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10283) ZCL_CB: Comanda trimisă cu succes. TSN: 101[0m
+[0;33mW (10293) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10303) ZCL_CB: Comanda trimisă cu succes. TSN: 102[0m
+[0;33mW (10303) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10313) ZCL_CB: Comanda trimisă cu succes. TSN: 103[0m
+[0;33mW (10313) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10323) ZCL_CB: Comanda trimisă cu succes. TSN: 104[0m
+[0;33mW (10333) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10333) ZCL_CB: Comanda trimisă cu succes. TSN: 105[0m
+[0;33mW (10343) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10343) ZCL_CB: Comanda trimisă cu succes. TSN: 106[0m
+[0;33mW (10353) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10353) ZCL_CB: Comanda trimisă cu succes. TSN: 107[0m
+[0;33mW (10363) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10363) ZCL_CB: Comanda trimisă cu succes. TSN: 108[0m
+[0;33mW (10373) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10383) ZCL_CB: Comanda trimisă cu succes. TSN: 109[0m
+[0;33mW (10383) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10393) ZCL_CB: Comanda trimisă cu succes. TSN: 110[0m
+[0;33mW (10403) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10403) ZCL_CB: Comanda trimisă cu succes. TSN: 111[0m
+[0;33mW (10413) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10413) ZCL_CB: Comanda trimisă cu succes. TSN: 112[0m
+[0;33mW (10423) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10423) ZCL_CB: Comanda trimisă cu succes. TSN: 113[0m
+[0;33mW (10433) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10433) ZCL_CB: Comanda trimisă cu succes. TSN: 114[0m
+[0;33mW (10443) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10453) ZCL_CB: Comanda trimisă cu succes. TSN: 115[0m
+[0;33mW (10453) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10463) ZCL_CB: Comanda trimisă cu succes. TSN: 116[0m
+[0;33mW (10463) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10473) ZCL_CB: Comanda trimisă cu succes. TSN: 117[0m
+[0;33mW (10483) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10483) ZCL_CB: Comanda trimisă cu succes. TSN: 118[0m
+[0;33mW (10493) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10493) ZCL_CB: Comanda trimisă cu succes. TSN: 119[0m
+[0;33mW (10503) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10503) ZCL_CB: Comanda trimisă cu succes. TSN: 120[0m
+[0;33mW (10513) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10513) ZCL_CB: Comanda trimisă cu succes. TSN: 121[0m
+[0;33mW (10523) ZigBee Coordinator: Failed to send message[0m
+[0;32mI (10533) ZCL_CB: Comanda trimisă cu succes. TSN: 122[0m
+[0;33mW (10533) ZigBee Coordinator: Failed to send message[0m
