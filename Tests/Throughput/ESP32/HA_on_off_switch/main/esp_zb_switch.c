@@ -24,16 +24,7 @@
 #include "esp_private/esp_clk.h"
 #include "esp_timer.h"
 #include "zboss_api.h"
-
 #include "esp_pm.h"
-
-#define ZIGBEE_STACK_INITIALIZED_SIGNAL_PIN 2
-#define FORMED_NETWORK_SIGNAL_PIN 3
-#define DEVICE_FOUND_SIGNAL_PIN 4
-#define DEVICE_INIT_AFTER_RESET 5
-
-#define TIMEOUT_MS 500
-#define REPORT_INTERVAL_MS (5 * 60 * 1000) // 5 minutes
 
 uint16_t target_short_addr = 0x0000; // The short address of the light bulb device to control
 bool END_DEVICE_DISCOVERD = false;
@@ -41,12 +32,12 @@ uint32_t packets_sent = 0;
 uint32_t packets_attemped = 0;
 uint32_t packets_received = 0;
 static uint32_t packets_lost = 0;
-
-static uint32_t last_sent_tsn = 0;
 static bool waiting_for_response = false;
 
 static esp_timer_handle_t timeout_timer;
 static esp_timer_handle_t report_timer;
+
+uint32_t last_succesfull_tsn = 0;
 
 static void send_toggle_command(void);
 #if defined ZB_ED_ROLE
@@ -67,14 +58,11 @@ esp_zb_zcl_on_off_cmd_t cmd_req = {0};
 static void esp_zb_buttons_handler(switch_func_pair_t *button_func_pair)
 {
     if (button_func_pair->func == SWITCH_ONOFF_TOGGLE_CONTROL) {
-        /* implemented light switch toggle functionality */
-        //esp_zb_zcl_on_off_cmd_t cmd_req;
         cmd_req.zcl_basic_cmd.src_endpoint = HA_ONOFF_SWITCH_ENDPOINT;
         cmd_req.zcl_basic_cmd.dst_addr_u.addr_short = target_short_addr;
         cmd_req.address_mode = ESP_ZB_APS_ADDR_MODE_16_ENDP_PRESENT;
         cmd_req.on_off_cmd_id = ESP_ZB_ZCL_CMD_ON_OFF_TOGGLE_ID;
-        
-        ESP_EARLY_LOGI(TAG, "Send 'on_off toggle' command");
+        ESP_EARLY_LOGI(TAG, "Send 'on_off toggle' command from button");
         esp_zb_zcl_on_off_cmd_req(&cmd_req);
     }
 }
@@ -82,12 +70,11 @@ static void esp_zb_buttons_handler(switch_func_pair_t *button_func_pair)
 static void on_timeout(void* arg)
 {
     if (waiting_for_response) {
-        ESP_LOGW(TAG, "Timeout: Nu s-a primit raspuns pentru TSN %d", last_sent_tsn);
+        ESP_LOGW(TAG, "Timeout: No ACK for TSN %lu", last_succesfull_tsn);
         packets_lost++;
         waiting_for_response = false;
 
-        // Poți decide dacă retrimiți aici sau aștepți conexiunea
-        send_toggle_command();  // Retrimite comanda
+        send_toggle_command();
     }
 }
 
@@ -110,11 +97,11 @@ static void init_timeout_timer()
     esp_timer_create(&timer_args, &timeout_timer);
 }
 
-// === Raport la fiecare 5 minute ===
+// 5 minute report for packet loss
 static void report_stats(void* arg)
 {
-    ESP_LOGI(TAG, "== RAPORT 5 MINUTE ==");
-    ESP_LOGI(TAG, "Trimise: %lu, Recepționate: %lu, Pierdute: %lu",
+    ESP_LOGI(TAG, "-------- 5minute report--------");
+    ESP_LOGI(TAG, "Sent: %lu, Received: %lu, Lost: %lu",
              packets_sent, packets_received, packets_lost);
 }
 
@@ -139,33 +126,25 @@ static void send_toggle_command(void)
     uint32_t tsn = esp_zb_zcl_on_off_cmd_req(&cmd_req);
     if (tsn > 0 && END_DEVICE_DISCOVERD) {
         packets_sent++;
-        last_sent_tsn = tsn;
+        last_succesfull_tsn = tsn;
         waiting_for_response = true;
         start_timeout_timer();
-        //ESP_LOGI(TAG, "Sent message");
     }
 }
 
-void my_zcl_send_status_cb(const esp_zb_zcl_command_send_status_message_t *status_info)
+void zcl_send_status (esp_zb_zcl_command_send_status_message_t *status_info)
 {
     if (status_info->status == ESP_OK && END_DEVICE_DISCOVERD)
     {
-        //ESP_LOGI("ZCL_CB", "Comanda trimisă cu succes. TSN: %d", status_info->tsn);
         packets_received++;
         waiting_for_response = false;
         stop_timeout_timer();
         send_toggle_command();
         //ESP_LOGI(TAG, "Pachete trimise: %lu, Pachete primite: %lu, Pachete pierdute: %lu",
         //     packets_sent, packets_received, lost);
-    } else {
-        ESP_LOGW(TAG, "Eroare la trimitere! Cod: 0x%x", status_info->status);
+    } else if (status_info->status == ESP_OK && !END_DEVICE_DISCOVERD) {
+        ESP_LOGW(TAG, "End device not discovered yet. Restart the ZED");
     }
-
-    /*ESP_LOGI(TAG, "De la EP %d -> către EP %d (addr 0x%04X)",
-             status_info->src_endpoint,
-             status_info->dst_endpoint,
-             3);
-   */
 }
 
 static void bdb_start_top_level_commissioning_cb(uint8_t mode_mask)
@@ -241,7 +220,6 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
             } else {
                 ESP_LOGI(TAG, "Device rebooted");
                 esp_zb_bdb_open_network(180);
-                gpio_set_level(DEVICE_INIT_AFTER_RESET, 1);
             }
         } else {
             ESP_LOGE(TAG, "Failed to initialize Zigbee stack (status: %s)", esp_err_to_name(err_status));
@@ -256,7 +234,6 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
             //         extended_pan_id[3], extended_pan_id[2], extended_pan_id[1], extended_pan_id[0],
             //         esp_zb_get_pan_id(), esp_zb_get_current_channel(), esp_zb_get_short_address());
             esp_zb_bdb_start_top_level_commissioning(ESP_ZB_BDB_MODE_NETWORK_STEERING);
-            gpio_set_level(FORMED_NETWORK_SIGNAL_PIN, 1);
         } else {
             ESP_LOGI(TAG, "Restart network formation (status: %s)", esp_err_to_name(err_status));
             esp_zb_scheduler_alarm((esp_zb_callback_t)bdb_start_top_level_commissioning_cb, ESP_ZB_BDB_MODE_NETWORK_FORMATION, 1000);
@@ -275,7 +252,6 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
         cmd_req.dst_nwk_addr = dev_annce_params->device_short_addr;
         cmd_req.addr_of_interest = dev_annce_params->device_short_addr;
         esp_zb_zdo_find_on_off_light(&cmd_req, user_find_cb, NULL);
-        gpio_set_level(DEVICE_FOUND_SIGNAL_PIN, 1);
         break;
     case ESP_ZB_NWK_SIGNAL_PERMIT_JOIN_STATUS:
         if (err_status == ESP_OK) {
@@ -294,7 +270,6 @@ void esp_zb_app_signal_handler(esp_zb_app_signal_t *signal_struct)
 
 static void esp_zb_task(void *pvParameters)
 {
-    gpio_set_level(ZIGBEE_STACK_INITIALIZED_SIGNAL_PIN, 1);
     esp_zb_cfg_t zb_nwk_cfg = ESP_ZB_ZC_CONFIG();
     esp_zb_init(&zb_nwk_cfg);
     esp_zb_secur_network_key_set((uint8_t *)ZIGBEE_DEFAULT_KEY);
@@ -303,10 +278,8 @@ static void esp_zb_task(void *pvParameters)
     esp_zb_ep_list_t *esp_zb_on_off_switch_ep = esp_zb_on_off_switch_ep_create(HA_ONOFF_SWITCH_ENDPOINT, &switch_cfg);
     esp_zb_device_register(esp_zb_on_off_switch_ep);
     esp_zb_set_primary_network_channel_set(ESP_ZB_PRIMARY_CHANNEL_MASK);
-    esp_zb_zcl_command_send_status_handler_register(my_zcl_send_status_cb);
-    ESP_ERROR_CHECK(zb_zcl_register_cb(esp_zb_on_off_switch_ep, my_zcl_send_status_cb));
+    esp_zb_zcl_command_send_status_handler_register(zcl_send_status);
     ESP_ERROR_CHECK(esp_zb_start(false));
-    //esp_zb_scheduler_alarm(send_toggle_command, NULL, DELAY_BETWEEN_TOGGLE_COMMANDS_MS);
     while (true) {
         esp_zb_main_loop_iteration();
     }
@@ -319,23 +292,10 @@ void app_main(void)
         .host_config = ESP_ZB_DEFAULT_HOST_CONFIG(),
     };
 
-    gpio_config_t io_conf = {
-        .pin_bit_mask = (1ULL << ZIGBEE_STACK_INITIALIZED_SIGNAL_PIN) 
-                        | (1 << FORMED_NETWORK_SIGNAL_PIN) 
-                        | (1 << DEVICE_FOUND_SIGNAL_PIN) 
-                        | (1 << 5),
-        .mode = GPIO_MODE_OUTPUT,
-    };
-
     // Get the frequency of the RC_FAST_CLK (internal 8 MHz RC oscillator)
     uint32_t freq_hz = esp_clk_cpu_freq();
     ESP_LOGI("CPU_FREQ", "CPU frequency: %lu Hz", (unsigned long)freq_hz);
 
-    gpio_config(&io_conf);
-    gpio_set_level(FORMED_NETWORK_SIGNAL_PIN, 0);
-    gpio_set_level(DEVICE_FOUND_SIGNAL_PIN, 0);
-    gpio_set_level(DEVICE_INIT_AFTER_RESET, 0);
-    gpio_set_level(5, 0);
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_zb_platform_config(&config));
     //switch_driver_init(button_func_pair, PAIR_SIZE(button_func_pair), esp_zb_buttons_handler);

@@ -12,6 +12,9 @@
 #define TAG                             "ZigBee Coordinator"
 #define DELAY_BETWEEN_TOGGLE_COMMANDS_MS 20  // la 1ms programul se blocheaza dupa cateva toggle-uri, si mcu-ul se reseteaza
 
+#define TIMEOUT_MS 500
+#define REPORT_INTERVAL_MS (5 * 60 * 1000) // 5 minutes
+
 #define ESP_ZB_ZC_CONFIG()                                                              \
     {                                                                                   \
         .esp_zb_role = ESP_ZB_DEVICE_TYPE_COORDINATOR,                                  \
