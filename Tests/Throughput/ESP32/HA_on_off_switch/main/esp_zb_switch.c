@@ -29,17 +29,15 @@
 uint16_t target_short_addr = 0x0000; // The short address of the light bulb device to control
 bool END_DEVICE_DISCOVERD = false;
 uint32_t packets_sent = 0;
-uint32_t packets_attemped = 0;
 uint32_t packets_received = 0;
-static uint32_t packets_lost = 0;
+uint32_t packets_lost = 0;
 static bool waiting_for_response = false;
+uint32_t last_succesfull_tsn = 0;
 
 static esp_timer_handle_t timeout_timer;
 static esp_timer_handle_t report_timer;
-
-uint32_t last_succesfull_tsn = 0;
-
 static void send_toggle_command(void);
+
 #if defined ZB_ED_ROLE
 #error Define ZB_COORDINATOR_ROLE in idf.py menuconfig to compile light switch source code.
 #endif
@@ -103,6 +101,9 @@ static void report_stats(void* arg)
     ESP_LOGI(TAG, "-------- 5minute report--------");
     ESP_LOGI(TAG, "Sent: %lu, Received: %lu, Lost: %lu",
              packets_sent, packets_received, packets_lost);
+    packets_sent = 0 ;
+    packets_received = 0;
+    packets_lost = 0;
 }
 
 static void init_report_timer()
@@ -117,8 +118,6 @@ static void init_report_timer()
 
 static void send_toggle_command(void)
 {
-    packets_attemped++;
-
     cmd_req.zcl_basic_cmd.src_endpoint = HA_ONOFF_SWITCH_ENDPOINT;
     cmd_req.zcl_basic_cmd.dst_addr_u.addr_short = target_short_addr;
     cmd_req.address_mode = ESP_ZB_APS_ADDR_MODE_16_ENDP_PRESENT;
