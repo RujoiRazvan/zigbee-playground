@@ -12,3 +12,8 @@ Tests/Throughput/ESP32/HA_on_off_switch/build
 Tests/Throughput/ESP32/HA_on_off_switch/.vscode
 Tests/Throughput/ESP32/HA_on_off_light/build
 Tests/Throughput/ESP32/HA_on_off_light/.vscode
+Tests/Throughput/STM32/Utilities
+Tests/Throughput/STM32/Middlewares
+Tests/Throughput/STM32/drivers
+Tests/Throughput/STM32/Projects/STM32WB5MM-DK/Applications/Zigbee/Zigbee_OnOff_Server_Coord/STM32CubeIDE/Debug
+Tests/Throughput/STM32/Projects/STM32WB5MM-DK/Applications/Zigbee/Zigbee_OnOff_Client_Router/STM32CubeIDE/Debug
