@@ -5,11 +5,11 @@
 61	784	7700822207429515	esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj	5775ba6d20a6551f
 5031	6439	7700822263509544	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj	12013f46bd636478
 126	801	7700822207799521	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/uart_periph.c.obj	9d49f54105a8e082
-135	895	7700822208329570	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/adc_periph.c.obj	e5c8b1931e8fb2ec
 2087	3253	7700822231829558	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	48028adea11dcfd5
 6966	8911	7700822284359595	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/chip_info.c.obj	15b0e354a2d05a6f
 785	2086	7700822215819548	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/i2s_periph.c.obj	c0c1aeaa870ec525
 206	838	7700822208059539	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/rmt_periph.c.obj	f70020c5332d2670
+135	895	7700822208329570	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/adc_periph.c.obj	e5c8b1931e8fb2ec
 2097	5031	7700822242259534	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj	e67517b0d3dded8c
 163	873	7700822208219573	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/gdma_periph.c.obj	209402021c235889
 3015	3957	7700822239409516	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32h2.c.obj	45f11a3f00c15e3d
@@ -108,97 +108,114 @@
 16916	17717	7700822376603149	bootloader.elf	2c38c0a6b77c796b
 17717	19376	7700822393483398	.bin_timestamp	7a57b1ae14bdcd6f
 17717	19376	7700822393483398	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/.bin_timestamp	7a57b1ae14bdcd6f
-24	167	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	167	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	195	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	195	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	184	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	184	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	166	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	166	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-25	192	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-25	192	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-27	185	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-27	185	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-43	251	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-43	251	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-29	175	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-29	175	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	199	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	199	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	215	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	215	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	213	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	213	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-29	259	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-29	259	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	220	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	220	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	267	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	267	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	163	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	163	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	188	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	188	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	196	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	196	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-47	257	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-47	257	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-21	303	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-21	303	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-31	213	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-31	213	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-22	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-22	160	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	171	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	171	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	194	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-24	194	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-30	221	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-30	221	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-30	190	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-30	190	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-27	177	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-27	177	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	178	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	178	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	176	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	176	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	233	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-28	233	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	179	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-23	179	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	166	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-26	166	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	177	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	177	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	160	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-19	261	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-19	261	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	172	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	172	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	160	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	160	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	160	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	149	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-18	149	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	221	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	221	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-19	182	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-19	182	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-21	167	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-21	167	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	166	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	166	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	175	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	175	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	156	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-20	156	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	170	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	170	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	154	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
-17	154	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
 17	153	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
 17	153	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
+16	361	7711997173292147	CMakeFiles/bootloader.elf.dir/project_elf_src_esp32h2.c.obj	5a449ec529698d84
+286	2545	7711997194965283	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/dedic_gpio_periph.c.obj	79058dc6806800c5
+278	2574	7711997195055282	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/ana_cmpr_periph.c.obj	36b0e1b56d61a2a9
+270	2582	7711997194995281	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/adc_periph.c.obj	e5c8b1931e8fb2ec
+69	2590	7711997195095281	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/interrupts.c.obj	b9ac91def3369bb8
+254	2612	7711997195005291	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/gpio_periph.c.obj	a6ae72b796d0c266
+262	2621	7711997195035303	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/uart_periph.c.obj	9d49f54105a8e082
+297	2631	7711997195165278	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/gdma_periph.c.obj	209402021c235889
+314	2693	7711997196545282	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/ledc_periph.c.obj	7184c87780cc9942
+362	2979	7711997196465282	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/sdm_periph.c.obj	eca48ccab29d81c5
+330	3002	7711997196735294	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/rmt_periph.c.obj	f70020c5332d2670
+322	3010	7711997196735294	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/pcnt_periph.c.obj	393c19c2535887d7
+305	3017	7711997199715260	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/spi_periph.c.obj	e68adf50a06ed984
+2582	3210	7711997201505300	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/temperature_sensor_periph.c.obj	663ff1defb1eb76d
+2693	3221	7711997201625284	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/twai_periph.c.obj	98252f511d962d7
+2574	3229	7711997201645279	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/i2c_periph.c.obj	1953acd1718544f5
+62	3257	7711997202145309	esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj	256ef8d2789bcaa2
+55	3277	7711997202215287	esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj	5775ba6d20a6551f
+2631	3285	7711997202405274	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/mpi_periph.c.obj	5ac9fc7581a514c6
+2613	3294	7711997202425284	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/parlio_periph.c.obj	f61d96ce4e4f1e45
+2979	3336	7711997202745283	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/ieee802154_periph.c.obj	4481f844ed7c7d53
+2546	3373	7711997202635298	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/i2s_periph.c.obj	c0c1aeaa870ec525
+2590	3381	7711997202905314	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/timer_periph.c.obj	daace07380b12dcb
+2621	3389	7711997202965292	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/mcpwm_periph.c.obj	fe0b2d3b919742b0
+3010	3439	7711997203815284	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/system_retention_periph.c.obj	b2d3c0ca3de9e334
+3002	3466	7711997203975303	esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32h2/rtc_io_periph.c.obj	da10b1fd689e01d5
+3257	3713	7711997206625280	esp-idf/hal/CMakeFiles/__idf_hal.dir/lp_timer_hal.c.obj	5b288e260812c389
+3229	3738	7711997206915286	esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32h2/efuse_hal.c.obj	19608bbab92c5e0b
+3221	3782	7711997207005294	esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj	2bf04d1831a9b19d
+3210	3791	7711997206885292	esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj	5cfefda68e5632eb
+3337	3891	7711997207925287	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	48028adea11dcfd5
+3286	4023	7711997209555312	esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj	7f4b93bd0c735072
+3439	4032	7711997209475279	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj	17b830c22061f8d8
+3294	4137	7711997210735279	esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj	df68f42ce5865cef
+3466	4181	7711997210985292	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj	9df4c1e0aa045e0
+3277	4212	7711997211415285	esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj	1502a72f22907451
+3390	4222	7711997211425296	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj	15992528187c730a
+3713	4306	7711997212525280	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj	ffc009532fa25842
+3791	4314	7711997212555293	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32h2.c.obj	45f11a3f00c15e3d
+3783	4362	7711997212735283	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj	60818be022a946a1
+3381	4376	7711997213075279	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj	5ca4bf8aeee699d2
+3373	4431	7711997213785286	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj	e67517b0d3dded8c
+3738	4502	7711997214565288	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj	be8c48ba90db10f0
+4306	4748	7711997216975283	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj	64573dd687deb7d1
+4181	4847	7711997217605299	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj	80def84639a77db9
+4376	4920	7711997218715287	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32h2/bootloader_sha.c.obj	49f43646a4095a9c
+4362	4930	7711997218735286	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj	9f10ffad8b7b9980
+4023	4951	7711997218905286	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj	6fe350fa654d16cb
+4431	4966	7711997218975287	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32h2/bootloader_soc.c.obj	c4d174579cc7c698
+4032	5064	7711997220095277	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32h2.c.obj	86782f79be7ce0e8
+3891	5140	7711997220515287	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj	7fc12b784593f8c5
+4314	5181	7711997221215282	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj	431fca3ccb2c7fae
+3017	5236	7711997221965290	esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj	1f7b773ccee84d53
+4848	5337	7711997222785291	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32h2/esp_efuse_table.c.obj	c9cc28911cf0046
+4748	5406	7711997223475300	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj	12013f46bd636478
+4222	5430	7711997223515283	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj	2ef5558ad7e7c978
+4920	5558	7711997225125286	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32h2/esp_efuse_fields.c.obj	77ca8c62b14c35a5
+4930	5580	7711997225315300	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32h2/esp_efuse_rtc_calib.c.obj	ab087511a3d90df2
+5064	5632	7711997225555307	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj	e5aa65f1291d518a
+4502	5722	7711997226645287	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32h2/bootloader_esp32h2.c.obj	fe1a1ec4d5186fa4
+4137	5762	7711997226985309	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj	6345112c5bf0fa8b
+4212	5798	7711997227475312	esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj	a553e7799595eb2f
+4952	5806	7711997227495282	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32h2/esp_efuse_utility.c.obj	11722d187925be44
+5430	5830	7711997227785303	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.obj	c91d97764a1203d
+5236	5880	7711997228225287	esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj	e4db0dcdbac36ea7
+4966	5905	7711997228215291	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj	18da4ff8c7af2e75
+5407	5934	7711997228755285	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/esp_cpu_intr.c.obj	87d34cc4d2cd8a51
+5181	6081	7711997230165302	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c.obj	e33025719354cab
+5140	6089	7711997230105288	esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj	90bca9ad297c21f2
+5337	6120	7711997230735278	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj	ac3990ed6f418244
+5905	6153	7711997231035293	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj	30063d588fc2f3f1
+5935	6217	7711997231615293	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj	77b453a606d0dfc3
+5558	6229	7711997231685294	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/cpu_region_protect.c.obj	6bc48ca043f112f5
+5831	6367	7711997233095288	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/chip_info.c.obj	15b0e354a2d05a6f
+5580	6466	7711997234025289	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/rtc_clk_init.c.obj	8a90cf331a041ebc
+5762	6533	7711997234635287	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/pmu_init.c.obj	3c6f7aba36861b30
+6089	6870	7711997235155277	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj	40b235e50ed39104
+5880	6878	7711997235195305	esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj	a55213ffd15cff22
+5722	6879	7711997235235290	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/pmu_param.c.obj	5eabb80dd5bc3a38
+6081	6880	7711997235535287	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj	4922c826b9378624
+6120	6880	7711997235625290	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj	45e3d40e75300b87
+6217	6881	7711997236015285	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj	4c841d3866f616af
+5632	6882	7711997236105289	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/rtc_clk.c.obj	f957996231f66664
+6153	6883	7711997236405286	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_regi2c_esp32h2.c.obj	1c6334b11dfc1b58
+5806	6883	7711997236475289	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/rtc_time.c.obj	1d086d35f88f4a62
+6229	6884	7711997237345284	esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_wdt.c.obj	82afb9d1242db6eb
+5798	6885	7711997237415283	esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32h2/pmu_sleep.c.obj	97b256e730c720d0
+6367	6885	7711997237745285	esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj	4ca424b9eda2dc54
+6466	6887	7711997238455263	esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj	2e23099c993342f4
+6871	7047	7711997240155289	esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj	44b6a192de3a3192
+6533	7108	7711997240785274	esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj	f46f10d0adcde0cb
+7108	7237	7711997242065271	esp-idf/log/liblog.a	c9d339bea2a09a3f
+7237	7389	7711997243575261	esp-idf/esp_rom/libesp_rom.a	d1970d2e9ed2af69
+7389	7514	7711997244815281	esp-idf/esp_common/libesp_common.a	d265a4fc2a2aff85
+7514	7687	7711997246555266	esp-idf/esp_hw_support/libesp_hw_support.a	b3836db421bcddfc
+7687	7811	7711997247805336	esp-idf/esp_system/libesp_system.a	c158b49a8b0ba311
+7811	7973	7711997249415307	esp-idf/efuse/libefuse.a	6a342fa1178a5edb
+7973	8216	7711997251815282	esp-idf/bootloader_support/libbootloader_support.a	1901f22f6fa66622
+8216	8354	7711997253235276	esp-idf/esp_bootloader_format/libesp_bootloader_format.a	4f784c3260788d75
+8355	8479	7711997254475268	esp-idf/spi_flash/libspi_flash.a	a4fbdcaf038fc2a0
+8479	8611	7711997255795307	esp-idf/hal/libhal.a	ba28455958d549f9
+8611	8736	7711997257045311	esp-idf/micro-ecc/libmicro-ecc.a	8ffef50309ab3e65
+8736	8973	7711997259425317	esp-idf/soc/libsoc.a	73866b196fee73a2
+8973	9088	7711997260565327	esp-idf/main/libmain.a	e97d0340eb987ccf
+9088	9808	7711997267705287	bootloader.elf	2c38c0a6b77c796b
+9808	10224	7711997271915777	.bin_timestamp	7a57b1ae14bdcd6f
+9808	10224	7711997271915777	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/.bin_timestamp	7a57b1ae14bdcd6f
+10225	10369	0	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
+10225	10369	0	H:/STM32WB5MM-DK Project/zigbee-playground/Tests/Throughput/ESP32/HA_on_off_switch/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	a0b5aebc21899cc2
