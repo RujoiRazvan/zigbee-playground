@@ -150,7 +150,8 @@ void APP_ZIGBEE_Init(void)
 
   /* USER CODE BEGIN APP_ZIGBEE_INIT */
   /* Task associated with push button SW1 */
-  UTIL_SEQ_RegTask(1U << CFG_TASK_BUTTON_SW1, UTIL_SEQ_RFU, APP_ZIGBEE_SW1_Process); /* on off command*/
+  //UTIL_SEQ_RegTask(1U << CFG_TASK_BUTTON_SW1, UTIL_SEQ_RFU, APP_ZIGBEE_SW1_Process); /* on off command*/
+  UTIL_SEQ_RegTask(1U << CFG_TASK_NBR, UTIL_SEQ_RFU, APP_ZIGBEE_SW1_Process); /* on off command*/
   /* USER CODE END APP_ZIGBEE_INIT */
 
   /* Start the Zigbee on the CPU2 side */
@@ -308,6 +309,8 @@ static void APP_ZIGBEE_NwkForm(void)
     /* Since we're using group addressing (broadcast), shorten the broadcast timeout */
     uint32_t bcast_timeout = 3;
     ZbNwkSet(zigbee_app_info.zb, ZB_NWK_NIB_ID_NetworkBroadcastDeliveryTime, &bcast_timeout, sizeof(bcast_timeout));
+     UTIL_SEQ_SetTask(1U << CFG_TASK_NBR, CFG_SCH_PRIO_0);
+    //APP_ZIGBEE_SW1_Process();
   }
 } /* APP_ZIGBEE_NwkForm */
 
@@ -704,21 +707,27 @@ static void APP_ZIGBEE_SW1_Process(void)
   if (OnOffCtrl_On)
   {
     cmd_status = ZbZclOnOffClientOffReq(zigbee_app_info.onOff_client_1, &dst, APP_ZIGBEE_off_cb, NULL);
-    APP_DBG("SW1 PUSHED - SENDING LED OFF To Nwk 0x0000");
+    //APP_DBG("SW1 PUSHED - SENDING LED OFF To Nwk 0x0000");
   }
   else
   {
     cmd_status = ZbZclOnOffClientOnReq(zigbee_app_info.onOff_client_1, &dst, APP_ZIGBEE_on_cb, NULL);
-    APP_DBG("SW1 PUSHED - SENDING LED ON To Nwk 0x0000");
+    //APP_DBG("SW1 PUSHED - SENDING LED ON To Nwk 0x0000");
   }
   UTIL_SEQ_WaitEvt(EVENT_ON_OFF_RSP);
 
   /* check status of command request send to the Server */
-  if (cmd_status != ZCL_STATUS_SUCCESS)
-  {
-    APP_DBG("Error, ZbZclOnOffClient[On/Off]Req failed (SW1_ENDPOINT)");
+  switch (cmd_status){
+  case ZCL_STATUS_SUCCESS:
+	  //APP_DBG("Succes");
+	  break;
+  case ZCL_STATUS_FAILURE:
+	  APP_DBG("Failure");
+	  break;
+  default:
+	  break;
   }
-  else if (OnOffCtrl_On)
+  if (OnOffCtrl_On)
   {
     OnOffCtrl_On = 0U;
   }
@@ -726,6 +735,7 @@ static void APP_ZIGBEE_SW1_Process(void)
   {
     OnOffCtrl_On = 1U;
   }
+  UTIL_SEQ_SetTask(1U << CFG_TASK_NBR, CFG_SCH_PRIO_0);
 } /* APP_ZIGBEE_SW1_Process */
 
 
@@ -744,7 +754,7 @@ static void APP_ZIGBEE_on_cb(struct ZbZclCommandRspT *rsp, void *arg)
   }
   else
   {
-    APP_DBG("ON RSP from %#08llx",rsp->src.extAddr);
+    //APP_DBG("ON RSP from %#08llx",rsp->src.extAddr);
   }
   UTIL_SEQ_SetEvt(EVENT_ON_OFF_RSP);
 }
@@ -764,7 +774,7 @@ static void APP_ZIGBEE_off_cb(struct ZbZclCommandRspT *rsp, void *arg)
   }
   else
   {
-    APP_DBG("OFF RSP from %#08llx",rsp->src.extAddr);
+    //APP_DBG("OFF RSP from %#08llx",rsp->src.extAddr);
   }
   UTIL_SEQ_SetEvt(EVENT_ON_OFF_RSP);
 }
