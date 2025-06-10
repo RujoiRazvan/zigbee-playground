@@ -144,9 +144,9 @@ void MX_APPE_Init( void )
 /* USER CODE BEGIN MX_APPE_Init_1 */
   Init_Debug();
   
-  //LCD_DisplayInit();
+  LCD_DisplayInit();
 
-  //Led_Init();
+  Led_Init();
   //Initialize user buttons
   Button_Init();
   RxUART_Init();
